@@ -1,3 +1,50 @@
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.jumbo-green{
+    background-color: #4cae4c;
+    /*max-width:100%;*/
+    /*overflow-x: scroll;*/
+    margin-top: 3em;
+}
+.paddin1{
+    padding-left: 2em;
+    padding-right: 2em;
+}
+.paddin2{
+    padding-left: 6em;
+    padding-right: 6em;
+}
+.paddin3{
+    padding-left: 4em;
+    padding-right: 4em;
+}
+.paddin4{
+    padding-left: 7em;
+    padding-right: 7em;
+    padding-bottom: 1em;
+}
+.paddin5{
+    padding-left: 4.5em;
+    padding-right: 5em;
+}
+.jumbo-clear {
+    background-color: green;
+    padding-bottom: -3em;
+}
+.vid-center{
+    padding-left: 10em;
+}
 .south-box {
     margin-top: 5em;
     width: 80%;
