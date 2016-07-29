@@ -3,7 +3,9 @@ window.onload = function () {
         document.getElementById('modal').style.display = "none"
     };
 };
-
+function popupSubmit() {
+    alert("You did not meet the required character count for at least one credit. Please review each credit text box highlighted in red before resubmitting.");
+}
 $(function() {
     var startTime = $.now();
 
@@ -22,8 +24,10 @@ $(function() {
             $("#id_total_time").val( Math.floor(($.now() - startTime) / 1000 ));
             $("form").submit();
         } else {
+            popupSubmit();
             return false;
         }
+
     });
 
     function checkCharacterCount() {
