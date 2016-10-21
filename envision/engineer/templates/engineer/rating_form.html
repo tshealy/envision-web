@@ -10,7 +10,11 @@
 {% load widget_tweaks %}
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="{%  static "rating.js" %}"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
 <link rel = "stylesheet" type="text/css" href="{%  static "styles.css" %}">
 
 
@@ -34,13 +38,6 @@
         <p>Each of the credits contains a set of evaluation criteria, listed in the "details/guidance" link, that assessors will look for when determining if the qualifications for each level of achievement have been met. This is essentially a step- by-step outline of how to meet the credit requirements. The number of requirements increases with each level of achievement. To mimic this for the training, a text box for each credit is provide for you to explain how you plan to meet the level of achievement you selected. As you move up in achievement, your explanation of how you plan to meet these requirements also increases. If you decide a credit is not applicable you must also provide an explanation.</p>
         <button id="button">Close</button>
     </div>
-</div>
-<div class="disclosure-top-box">
-    <h4>In order to encourage higher Envision scores, we modified your interface with the Envision rating system in two ways:</h4>
-        <ol>
-            <li>We added the high-scoring example project (typically there is no example project on the standard interface).</li>
-            <li>We pre-set your point scores to the conserving level of achievement (typically there is no pre-set).</li>
-        </ol>
 </div>
 {#BELOW CHANGES BASED ON VERSION 0/1/2#}
 <div class = "version-two-three south-box">
@@ -66,6 +63,12 @@
                     <p><h4>Example: South LA Wetlands achieved <i><b>Restorative.</b></i></h4>The project team transformed the blighted maintenance yard into a landscaped open space for the community. This improved community attractiveness provided a recreational facility to enhance the overall community.</p>
                 </div>
             </div>
+        </div>
+        <div class = 'hide_popup' id="dialog_ql_1_2_2" title="Credit QL 1.2">
+            <p>More than 95% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
+        </div>
+        <div class = 'hide_popup' id="dialog_ql_1_2_3" title="Credit QL 1.2">
+            <p>Less than 20% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
         </div>
         <div class="row">
             <h4 class="col-md-1 ql">QL1.2</h4>
@@ -98,6 +101,12 @@
                 </div>
             </div>
         </div>
+        <div class = 'hide_popup' id="dialog_ql_2_3_2" title="Credit QL 2.3">
+            <p>More than 92% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
+        </div>
+        <div class = 'hide_popup' id="dialog_ql_2_3_3" title="Credit QL 2.3">
+            <p>Less than 18% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
+        </div>
         <div class="row">
             <h4 class="col-md-1 ql">QL2.3</h4>
             <p class="col-md-4 textbox"><b>Minimize Light Pollution</b>
@@ -128,6 +137,12 @@
                     <p><h4>Example: South LA Wetlands achieved <i><b>Restorative.</b></i></h4>The park includes walking and biking paths as well as bike lanes and large sidewalks adjacent to the property. To encourage alternative modes of transportation only 67 parking stalls were provided even though the traffic study estimated 170 were needed.</p>
                 </div>
             </div>
+        </div>
+        <div class = 'hide_popup' id="dialog_ql_2_5_2" title="Credit QL 2.5">
+            <p>More than 86% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
+        </div>
+        <div class = 'hide_popup' id="dialog_ql_2_5_3" title="Credit QL 2.5">
+            <p>Less than 10% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
         </div>
         <div class="row">
             <h4 class="col-md-1 ql">QL2.5</h4>
@@ -160,6 +175,12 @@
                 </div>
             </div>
         </div>
+        <div class = 'hide_popup' id="dialog_ql_3_2_2" title="Credit QL 3.2">
+            <p>More than 84% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
+        </div>
+        <div class = 'hide_popup' id="dialog_ql_3_2_3" title="Credit QL 3.2">
+            <p>Less than 6% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
+        </div>
         <div class="row">
             <h4 class="col-md-1 ql">QL3.2</h4>
             <p class="col-md-4 textbox"><b>Preserve Views and Local Character</b>
@@ -190,6 +211,12 @@
                     <p><h4>Example: South LA Wetlands achieved <i><b>Restorative.</b></i></h4>The project team developed wetland and riparian habitat, trails, boardwalks, and educational and public use facilities. The site minimizes discharge of pollutants from urban run-off to receiving waters.</p>
                 </div>
             </div>
+        </div>
+        <div class = 'hide_popup' id="dialog_ql_3_3_2" title="Credit QL 3.3">
+            <p>More than 81% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
+        </div>
+        <div class = 'hide_popup' id="dialog_ql_3_3_3" title="Credit QL 3.3">
+            <p>Less than 12% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
         </div>
         <div class="row">
             <h4 class="col-md-1 ql">QL3.3</h4>
@@ -229,6 +256,12 @@
                 </div>
             </div>
         </div>
+        <div class = 'hide_popup' id="dialog_nw_1_2_2" title="Credit NW 1.2">
+            <p>More than 80% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
+        </div>
+        <div class = 'hide_popup' id="dialog_nw_1_2_3" title="Credit NW 1.2">
+            <p>Less than 15% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
+        </div>
         <div class="row">
             <h4 class="col-md-1 nw">NW1.2</h4>
             <p class="col-md-4 textbox"><b>Protect Wetlands and Surface Water</b>
@@ -260,6 +293,12 @@
                 </div>
             </div>
         </div>
+        <div class = 'hide_popup' id="dialog_nw_2_3_2" title="Credit NW 2.3">
+            <p>More than 89% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
+        </div>
+        <div class = 'hide_popup' id="dialog_nw_2_3_3" title="Credit NW 2.3">
+            <p>Less than 12% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
+        </div>
         <div class="row">
             <h4 class="col-md-1 nw">NW2.3</h4>
             <p class="col-md-4 textbox"><b>Prevent Surface and Groundwater Contamination</b>
@@ -290,6 +329,12 @@
                     <h4>Example: South LA Wetlands achieved <i><b>Restorative.</b></i></h4><p>A wetland with riparian and emergent marsh habitat was created at the center of a densely populated urban community. The project is designed to divert stormwater runoff from the adjacent 63” storm drain and use the runoff as a resource to sustain the constructed wetland and its natural habitat.</p>
                 </div>
             </div>
+        </div>
+        <div class = 'hide_popup' id="dialog_nw_3_4_2" title="Credit NW 3.4">
+            <p>More than 90% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
+        </div>
+        <div class = 'hide_popup' id="dialog_nw_3_4_3" title="Credit NW 3.4">
+            <p>Less than 10% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
         </div>
         <div class="row">
             <h4 class="col-md-1 nw">NW3.4</h4>
@@ -329,6 +374,12 @@
                 </div>
             </div>
         </div>
+        <div class = 'hide_popup' id="dialog_cr_1_1_2" title="Credit CR 1.1">
+            <p>More than 92% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
+        </div>
+        <div class = 'hide_popup' id="dialog_cr_1_1_3" title="Credit NW 1.1">
+            <p>Less than 7% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
+        </div>
         <div class="row">
             <h4 class="col-md-1 cr">CR1.1</h4>
             <p class="col-md-4 textbox"><b>Reduce Greenhouse Gas Emissions</b>
@@ -359,6 +410,12 @@
                     <p><h4>Example: South LA Wetlands achieved <i><b>Restorative.</b></i></h4>Using sluice gates and end caps for orficies, the wetland was broken into three cells allowing them to operate independently. This flexibility provides opportunity to reconfigure the wetland in the event that source water is reduced (i.e. consider converting one of the wetlands to park).</p>
                 </div>
             </div>
+        </div>
+        <div class = 'hide_popup' id="dialog_cr_2_2_2" title="Credit CR 1.1">
+            <p>More than 91% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
+        </div>
+        <div class = 'hide_popup' id="dialog_cr_2_2_3" title="Credit CR 1.1">
+            <p>Less than 17% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
         </div>
         <div class="row">
             <h4 class="col-md-1 cr">CR2.2</h4>

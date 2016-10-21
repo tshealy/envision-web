@@ -1,3 +1,6 @@
+.hide_popup {
+    display: none;
+}
 #modal {
     position: fixed;
     font-family: Arial, Helvetica, sans-serif;

@@ -50,6 +50,10 @@ $(function() {
     if (parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 3){
         $("select").parent().siblings(".row").find(".required-count").text(charCounts['Restorative']);
     };
+    //Popup for not meeting restorative
+    //if ($("select").parent().siblings(".row").find(".required-count").text() == 'Restorative') {
+    //    $("#arrows").hide()
+    //};
 
     //character count for textarea
 
@@ -128,6 +132,16 @@ $(function() {
         };
         $("#id_QL1_2_loa").change(function() {
             $("#ql12-selected-points").text($("#id_QL1_2_loa :selected").val());
+            if (parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 1) {
+                if ($("#id_QL1_2_loa :selected").val() != 16) {
+                    $("#dialog_ql_1_2_2").dialog();
+                }
+            }
+            if (parseInt($(".data").html()) === 3 ) {
+             if ($("#id_QL1_2_loa :selected").val() == 16) {
+                $( "#dialog_ql_1_2_3" ).dialog();
+            }
+           }
         });
          if (parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 3){
             $("#id_QL2_3_loa").val('11').ready(function() {
@@ -136,14 +150,39 @@ $(function() {
         };
         $("#id_QL2_3_loa").change(function() {
             $("#ql23-selected-points").text($("#id_QL2_3_loa :selected").val());
-        });
-         if (parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 3){
+         //if (parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 3){
+         //   $("#id_QL2_5_loa").val('15').ready(function() {
+         //       $("#ql25-selected-points").text($("#id_QL2_5_loa :selected").val());
+            if (parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 1) {
+                if ($("#id_QL2_3_loa :selected").val() != 11) {
+                    $("#dialog_ql_2_3_2").dialog();
+                }
+            }
+            if (parseInt($(".data").html()) === 3 ) {
+             if ($("#id_QL2_3_loa :selected").val() == 11) {
+                //alert('<msg>');
+                $( "#dialog_ql_2_3_3" ).dialog();
+            }
+           }
+            });
+        if (parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 3){
             $("#id_QL2_5_loa").val('15').ready(function() {
                 $("#ql25-selected-points").text($("#id_QL2_5_loa :selected").val());
             });
         };
         $("#id_QL2_5_loa").change(function() {
             $("#ql25-selected-points").text($("#id_QL2_5_loa :selected").val());
+            if (parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 1) {
+                if ($("#id_QL2_5_loa :selected").val() != 15) {
+                    $("#dialog_ql_2_5_2").dialog();
+                }
+            }
+            if (parseInt($(".data").html()) === 3 ) {
+             if ($("#id_QL2_5_loa :selected").val() == 15) {
+                //alert('<msg>');
+                $( "#dialog_ql_2_5_3" ).dialog();
+            }
+           }
         });
 
         if (parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 3){
@@ -153,7 +192,18 @@ $(function() {
         };
         $("#id_QL3_2_loa").change(function() {
             $("#ql32-selected-points").text($("#id_QL3_2_loa :selected").val());
-        });
+            if (parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 1) {
+                if ($("#id_QL3_2_loa :selected").val() != 14) {
+                    $("#dialog_ql_3_2_2").dialog();
+                }
+            }
+            if (parseInt($(".data").html()) === 3 ) {
+             if ($("#id_QL3_2_loa :selected").val() == 14) {
+                //alert('<msg>');
+                $( "#dialog_ql_3_2_3" ).dialog();
+            }
+           }
+            });
         if (parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 3){
             $("#id_QL3_3_loa").val('13').ready(function() {
                 $("#ql33-selected-points").text($("#id_QL3_3_loa :selected").val());
@@ -161,7 +211,18 @@ $(function() {
         };
         $("#id_QL3_3_loa").change(function() {
             $("#ql33-selected-points").text($("#id_QL3_3_loa :selected").val());
-        });
+            if (parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 1) {
+                if ($("#id_QL3_3_loa :selected").val() != 13) {
+                    $("#dialog_ql_3_3_2").dialog();
+                }
+            }
+            if (parseInt($(".data").html()) === 3 ) {
+             if ($("#id_QL3_3_loa :selected").val() == 13) {
+                //alert('<msg>');
+                $( "#dialog_ql_3_3_3" ).dialog();
+            }
+           }
+            });
         if (parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 3){
             $("#id_NW1_2_loa").val('18').ready(function() {
                 $("#nw12-selected-points").text($("#id_NW1_2_loa :selected").val());
@@ -169,6 +230,17 @@ $(function() {
         };
         $("#id_NW1_2_loa").change(function() {
             $("#nw12-selected-points").text($("#id_NW1_2_loa :selected").val());
+            if (parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 1) {
+                if ($("#id_NW1_2_loa :selected").val() != 18) {
+                    $("#dialog_nw_1_2_2").dialog();
+                }
+            }
+            if (parseInt($(".data").html()) === 3 ) {
+             if ($("#id_NW1_2_loa :selected").val() == 18) {
+                //alert('<msg>');
+                $( "#dialog_nw_1_2_3" ).dialog();
+            }
+           }
         });
         if (parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 3){
             $("#id_NW2_3_loa").val('18').ready(function() {
@@ -177,6 +249,17 @@ $(function() {
         };
         $("#id_NW2_3_loa").change(function() {
             $("#nw23-selected-points").text($("#id_NW2_3_loa :selected").val());
+            if (parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 1) {
+                if ($("#id_NW2_3_loa :selected").val() != 18) {
+                    $("#dialog_nw_2_3_2").dialog();
+                }
+            }
+            if (parseInt($(".data").html()) === 3 ) {
+             if ($("#id_NW2_3_loa :selected").val() == 18) {
+                //alert('<msg>');
+                $( "#dialog_nw_2_3_3" ).dialog();
+            }
+           }
         });
         if (parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 3){
             $("#id_NW3_4_loa").val('19').ready(function() {
@@ -185,6 +268,17 @@ $(function() {
         };
         $("#id_NW3_4_loa").change(function() {
             $("#nw34-selected-points").text($("#id_NW3_4_loa :selected").val());
+            if (parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 1) {
+                if ($("#id_NW3_4_loa :selected").val() != 19) {
+                    $("#dialog_nw_3_4_2").dialog();
+                }
+            }
+            if (parseInt($(".data").html()) === 3 ) {
+             if ($("#id_NW3_4_loa :selected").val() == 19) {
+                //alert('<msg>');
+                $( "#dialog_nw_3_4_3" ).dialog();
+            }
+           }
         });
         if (parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 3){
             $("#id_CR1_1_loa").val('25').ready(function() {
@@ -193,6 +287,17 @@ $(function() {
         };
         $("#id_CR1_1_loa").change(function() {
             $("#cr11-selected-points").text($("#id_CR1_1_loa :selected").val());
+            if (parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 1) {
+                if ($("#id_CR1_1_loa :selected").val() != 25) {
+                    $("#dialog_cr_1_1_2").dialog();
+                }
+            }
+            if (parseInt($(".data").html()) === 3 ) {
+             if ($("#id_CR1_1_loa :selected").val() == 25) {
+                //alert('<msg>');
+                $( "#dialog_cr_1_1_3" ).dialog();
+            }
+           }
         });
         if (parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 3){
             $("#id_CR2_2_loa").val('20').ready(function() {
@@ -201,6 +306,17 @@ $(function() {
         };
         $("#id_CR2_2_loa").change(function() {
             $("#cr22-selected-points").text($("#id_CR2_2_loa :selected").val());
+            if (parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 1) {
+                if ($("#id_CR2_2_loa :selected").val() != 20) {
+                    $("#dialog_cr_2_2_2").dialog();
+                }
+            }
+            if (parseInt($(".data").html()) === 3 ) {
+             if ($("#id_CR2_2_loa :selected").val() == 20) {
+                //alert('<msg>');
+                $( "#dialog_cr_2_2_3" ).dialog();
+            }
+           }
         });
 
     };
