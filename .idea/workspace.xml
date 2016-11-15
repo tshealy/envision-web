@@ -35,10 +35,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/envision/engineer/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25466892">
+            <state vertical-scroll-proportion="0.0">
               <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
@@ -57,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/envision/engineer/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="71" selection-end-column="64" />
+            <state vertical-scroll-proportion="0.74533105">
+              <caret line="75" column="2453" selection-start-line="75" selection-start-column="2453" selection-end-line="75" selection-end-column="2453" />
               <folding />
             </state>
           </provider>
@@ -82,10 +82,10 @@
         <option value="$PROJECT_DIR$/envision/engineer/static/rating.js" />
         <option value="$PROJECT_DIR$/envision/engineer/static/rating2.js" />
         <option value="$PROJECT_DIR$/envision/engineer/templates/engineer/rating_form.html" />
-        <option value="$PROJECT_DIR$/envision/engineer/views.py" />
         <option value="$PROJECT_DIR$/envision/engineer/static/surveys/survey1.html" />
         <option value="$PROJECT_DIR$/envision/engineer/static/surveys/survey2.html" />
         <option value="$PROJECT_DIR$/envision/engineer/admin.py" />
+        <option value="$PROJECT_DIR$/envision/engineer/views.py" />
       </list>
     </option>
   </component>
@@ -1005,21 +1005,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/envision/engineer/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="71" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/envision/engineer/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25466892">
+        <state vertical-scroll-proportion="0.0">
           <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/envision/engineer/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.74533105">
+          <caret line="75" column="2453" selection-start-line="75" selection-start-column="2453" selection-end-line="75" selection-end-column="2453" />
+          <folding />
         </state>
       </provider>
     </entry>
