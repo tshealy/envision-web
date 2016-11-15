@@ -516,7 +516,92 @@ $(function() {
         });
     };
 
+    function cost() {
+        if (parseInt($(".data").html()) === 1 || parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 3) {
+            $("#id_QL1_2_cost").val('0').ready(function () {
+                $("#ql12-cost").text($("#id_QL1_2_cost :selected").val());
+            });
+        };
 
+        $("#id_QL1_2_cost").change(function () {
+            $("#ql12-cost").text($("#id_QL1_2_cost :selected").val());
+        });
+        if (parseInt($(".data").html()) === 1 || parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 3) {
+            $("#id_QL2_3_cost").val('0').ready(function () {
+                $("#ql23-cost").text($("#id_QL2_3_cost :selected").val());
+            });
+        };
+
+        $("#id_QL2_3_cost").change(function () {
+            $("#ql23-cost").text($("#id_QL2_3_cost :selected").val());
+        });
+        if (parseInt($(".data").html()) === 1 || parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 3) {
+            $("#id_QL2_5_cost").val('0').ready(function () {
+                $("#ql25-cost").text($("#id_QL2_5_cost :selected").val());
+            });
+        };
+
+        $("#id_QL2_5_cost").change(function () {
+            $("#ql25-cost").text($("#id_QL2_5_cost :selected").val());
+        });
+        if (parseInt($(".data").html()) === 1 || parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 3) {
+            $("#id_QL3_2_cost").val('0').ready(function () {
+                $("#ql32-cost").text($("#id_QL3_2_cost :selected").val());
+            });
+        };
+
+        $("#id_QL3_2_cost").change(function () {
+            $("#ql32-cost").text($("#id_QL3_2_cost :selected").val());
+        });
+        if (parseInt($(".data").html()) === 1 || parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 3) {
+            $("#id_QL3_3_cost").val('0').ready(function () {
+                $("#ql33-cost").text($("#id_QL3_3_cost :selected").val());
+            });
+        };
+
+        $("#id_QL3_3_cost").change(function () {
+            $("#ql33-cost").text($("#id_QL3_3_cost :selected").val());
+        });
+        if (parseInt($(".data").html()) === 1 || parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 3) {
+            $("#id_NW1_2_cost").val('0').ready(function () {
+                $("#nw12-cost").text($("#id_NW1_2_cost :selected").val());
+            });
+        };
+
+        $("#id_NW1_2_cost").change(function () {
+            $("#nw12-cost").text($("#id_NW1_2_cost :selected").val());
+        });
+        if (parseInt($(".data").html()) === 1 || parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 3) {
+            $("#id_NW2_3_cost").val('0').ready(function () {
+                $("#nw23-cost").text($("#id_NW2_3_cost :selected").val());
+            });
+        };
+
+        $("#id_NW2_3_cost").change(function () {
+            $("#nw12-cost").text($("#id_NW1_2_cost :selected").val());
+        });
+        if (parseInt($(".data").html()) === 1 || parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 3) {
+            $("#id_NW3_4_cost").val('0').ready(function () {
+                $("#nw34-cost").text($("#id_NW3_4_cost :selected").val());
+            });
+        };
+
+        $("#id_NW3_4_cost").change(function () {
+            $("#nw34-cost").text($("#id_NW3_4_cost :selected").val());
+        });
+        if (parseInt($(".data").html()) === 1 || parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 3) {
+            $("#id_CR1_1_cost").val('0').ready(function () {
+                $("#cr11-cost").text($("#id_CR1_1_cost :selected").val());
+            });
+        };
+
+        $("#id_CR2_2_cost").change(function () {
+            $("#cr22-cost").text($("#id_CR2_2_cost :selected").val());
+        });
+        $("#id_CR2_2_cost").change(function () {
+            $("#cr22-cost").text($("#id_CR2_2_cost :selected").val());
+        });
+    };
      function totalPossibelPoints() {
         var arr = $(".possible-points");
         var total = 0;
@@ -563,6 +648,7 @@ $(function() {
     possiblePoints();
     selectedPoints();
     included();
+    cost();
     totalPossibelPoints();
     totalSelectedPoints();
 
