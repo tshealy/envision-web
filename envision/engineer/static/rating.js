@@ -485,9 +485,10 @@ $(function() {
         $("#id_CR2_2_cost").change(function () {
             $("#cr22-cost").text($("#id_CR2_2_cost :selected").val());
         });
-        $("#id_CR2_2_cost").change(function () {
-            $("#cr22-cost").text($("#id_CR2_2_cost :selected").val());
-        });
+        if (parseInt($(".data").html()) === 1 || parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 3) {
+            $("#id_CR2_2_cost").val('-3').ready(function () {
+                $("#cr22-cost").text($("#id_CR2_2_cost :selected").val());
+            });
     };
      function totalPossiblePoints() {
         var arr = $(".possible-points");
