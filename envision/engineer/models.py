@@ -54,7 +54,6 @@ class Rating(models.Model):
         (16, "Restorative"),
     )
     ql_cost_1_2 = (
-        (-3, 'N/A'),
         (-2, "Signficant Savings"),
         (-1, "Some Savings"),
         (0, "Neutral"),

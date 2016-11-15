@@ -218,6 +218,9 @@ img {
     background-color: yellow;
     text-align: center;
 }
+.cost{
+    margin-left: 5px;
+}
 .quality {
     height: 4em;
     margin-top: 5em;
