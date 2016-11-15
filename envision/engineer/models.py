@@ -54,6 +54,7 @@ class Rating(models.Model):
         (16, "Restorative"),
     )
     ql_cost_1_2 = (
+        (-3, "--"),
         (-2, "Signficant Savings"),
         (-1, "Some Savings"),
         (0, "Neutral"),
@@ -74,6 +75,7 @@ class Rating(models.Model):
         (11, "Restorative"),
     )
     ql_cost_2_3 = (
+        (-3, "--"),
         (-2, "Signficant Savings"),
         (-1, "Some Savings"),
         (0, "Neutral"),
@@ -94,6 +96,7 @@ class Rating(models.Model):
         (15, "Restorative"),
     )
     ql_cost_2_5 = (
+        (-3, "--"),
         (-2, "Signficant Savings"),
         (-1, "Some Savings"),
         (0, "Neutral"),
@@ -114,6 +117,7 @@ class Rating(models.Model):
         (14, "Restorative"),
     )
     ql_cost_3_2 = (
+        (-3, "--"),
         (-2, "Signficant Savings"),
         (-1, "Some Savings"),
         (0, "Neutral"),
@@ -134,6 +138,7 @@ class Rating(models.Model):
         (13, "Restorative"),
     )
     ql_cost_3_3 = (
+        (-3, "--"),
         (-2, "Signficant Savings"),
         (-1, "Some Savings"),
         (0, "Neutral"),
@@ -154,6 +159,7 @@ class Rating(models.Model):
         (18, "Restorative"),
     )
     nw_cost_1_2 = (
+        (-3, "--"),
         (-2, "Signficant Savings"),
         (-1, "Some Savings"),
         (0, "Neutral"),
@@ -174,6 +180,7 @@ class Rating(models.Model):
         (18, "Restorative"),
     )
     nw_cost_2_3 = (
+        (-3, "--"),
         (-2, "Signficant Savings"),
         (-1, "Some Savings"),
         (0, "Neutral"),
@@ -195,6 +202,7 @@ class Rating(models.Model):
         (19, "Restorative"),
     )
     nw_cost_3_4 = (
+        (-3, "--"),
         (-2, "Signficant Savings"),
         (-1, "Some Savings"),
         (0, "Neutral"),
@@ -215,6 +223,7 @@ class Rating(models.Model):
         (25, "Restorative"),
     )
     cr_cost_1_1 = (
+        (-3, "--"),
         (-2, "Signficant Savings"),
         (-1, "Some Savings"),
         (0, "Neutral"),
@@ -235,6 +244,7 @@ class Rating(models.Model):
         (20, "Restorative"),
     )
     cr_cost_2_2 = (
+        (-3, "--"),
         (-2, "Signficant Savings"),
         (-1, "Some Savings"),
         (0, "Neutral"),
