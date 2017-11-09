@@ -14,7 +14,6 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="{%  static "rating.js" %}"></script>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<link rel="stylesheet" href="/resources/demos/style.css">
 <link rel = "stylesheet" type="text/css" href="{%  static "styles.css" %}">
 
 
@@ -35,58 +34,45 @@
 <div id="modal">
     <div class="modalcontent">
         <h1>Instructions Before You Get Started!</h1>
-        <p>Each of the credits contains a set of evaluation criteria, listed in the "details/guidance" link, that assessors will look for when determining if the qualifications for each level of achievement have been met. This is essentially a step- by-step outline of how to meet the credit requirements. The number of requirements increases with each level of achievement. To mimic this for the training, a text box for each credit is provide for you to explain how you plan to meet the level of achievement you selected. As you move up in achievement, your explanation of how you plan to meet these requirements also increases. If you decide a credit is not applicable you must also provide an explanation.</p>
+        <p>Before selecting a level of acheivement read the INTENT of each credit carefully. Alos, each of the credits contains a set of evaluation criteria, listed in the "details/guidance" link.</p>
         <button id="button">Close</button>
     </div>
 </div>
 {#BELOW CHANGES BASED ON VERSION 0/1/2#}
-<div class = "version-two-three south-box">
-    <h3 id="title">An example project: South LA Wetlands</h3>
-    <div>
-        <img id="south_la_park" src={% static "images/south_la_park.jpg" %} />
-        <p id="image-description">Here is an example project to help with your assessment. The South Los Angeles Wetland Park is a nature park and sustainable stormwater treatment wetland constructed on a former Brownfield site in Los Angeles, CA. Both the previous site and end result are similar to what is possible in Cordova, AL. Included below are examples to explain how the South LA team achieved a platinum rating.</p>
-    </div>
-</div>
-{#ABOVE CHANGES BASED ON VERSION 0/1/2#}
 <form id="happy-form" class="navbar-form navbar-center" method="POST" action="{% url 'engineer_detail' engineer.pk %}">
     {% csrf_token %}
     <div class = "headerbox">
-        <div class = "quality">
-            <h3 class="category-title">Quality of Life</h3>
+        <div class = "resource">
+            <h3 class="category-title">Resource Allocation</h3>
         </div>
     </div>
-{#STARTS QL1.2#}
+{#STARTS RA1.1#}
     <div class="container bigbox">
-        <div class="version-two-three">
-            <div class="row">
-                <div class="col-md-12 box-example-ql">
-                    <p><h4>Example: South LA Wetlands achieved <i><b>Restorative.</b></i></h4>The project team transformed the blighted maintenance yard into a landscaped open space for the community. This improved community attractiveness provided a recreational facility to enhance the overall community.</p>
-                </div>
-            </div>
-        </div>
-        <div class = 'hide_popup' id="dialog_ql_1_2_2" title="Credit QL 1.2">
-            <p>More than 95% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
-        </div>
-        <div class = 'hide_popup' id="dialog_ql_1_2_3" title="Credit QL 1.2">
-            <p>Less than 20% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
-        </div>
         <div class="row">
-            <h4 class="col-md-1 ql">QL1.2</h4>
-            <p class="col-md-4 textbox"><b>Stimulate Sustainable Growth and Development</b>
-                <br>Support and stimulate sustainable growth and development, including improvements in job growth, capacity building, productivity, business attractiveness, and livability.<br>
-                <a href={% static "details/QL1.2/index.html" %} target="_blank">detail/guidance</a>
-            </p>
-            <h4 class="col-md-2"> {{ rating_form.QL1_2_inc }}</h4>
-            <h4 class="col-md-2"> {{ rating_form.QL1_2_loa }}</h4>
+            <h4 class="col-md-1 ra">RA 1.1</h4>
+            <div class="version-one">
+                <p class="col-md-4 textbox"><b>Reduce Energy Intensity of Materials</b>
+                    <br>Reduce the impacts of material use over the project life by using less material or specifying materials with lower net embodied energy from extraction, refinement/manufacture, and transport.<br>
+                    <a href={% static "details/RA1.1/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <div class="version-two">
+                <p class="col-md-4 textbox"><b>Reduce <u>Cost</u> of Energy Intensity of Materials</b>
+                    <br>Reduce transportation <u>costs</u> over the project life by using less material that requires transportation from the manufacturer to the site.<br>
+                    <a href={% static "details/RA1.1/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <h4 class="col-md-2"> {{ rating_form.RA1_1_inc }}</h4>
+            <h4 class="col-md-2"> {{ rating_form.RA1_1_loa }}</h4>
             <div class="col-md-1 col-md-offset-1 box-yellow">
-                <h4 class="selected-points" id="ql12-selected-points">0</h4>
+                <h4 class="selected-points" id="ra11-selected-points">0</h4>
             </div>
             <div class="col-md-1 box-white">
-                <h4 class="possible-points" id="ql12-possible-points">0</h4>
+                <h4 class="possible-points" id="ra11-possible-points">0</h4>
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    {{ rating_form.QL1_2_exp |attr:"rows:4" }}
+                    {{ rating_form.RA1_1_exp |attr:"rows:4" }}
                     <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
                 </div>
             </div>
@@ -94,175 +80,303 @@
         <div class='row'>
         <div class='col-md-1'></div>
             <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
-            <h4 class="col-md-4">{{ rating_form.QL1_2_cost }}</h4>
+            <h4 class="col-md-4">{{ rating_form.RA1_1_cost }}</h4>
         </div>
     </div>
-{#STARTS QL2.3#}
+{#STARTS RA1.2#}
     <div class="container bigbox">
-        <div class="version-two-three">
-            <div class="row">
-                <div class="col-md-12 box-example-ql">
-                    <p><h4>Example: South LA Wetlands achieved <i><b>Restorative.</b></i></h4>The project team conducted an assessment of lighting needs and found only security lighting along the pedestrian walkways was needed. The project uses solar lights with cut-off lenses to reduce both lighting energy requirements and light spillage.</p>
-                </div>
-            </div>
-        </div>
-        <div class = 'hide_popup' id="dialog_ql_2_3_2" title="Credit QL 2.3">
-            <p>More than 92% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
-        </div>
-        <div class = 'hide_popup' id="dialog_ql_2_3_3" title="Credit QL 2.3">
-            <p>Less than 18% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
-        </div>
         <div class="row">
-            <h4 class="col-md-1 ql">QL2.3</h4>
-            <p class="col-md-4 textbox"><b>Minimize Light Pollution</b>
-                <br>Prevent excessive glare, light at night, and light directed skyward to conserve energy and reduce obtrusive lighting and excessive glare.<br>
-                <a href={% static "details/QL2.3/index.html" %} target="_blank">detail/guidance</a>
-            </p>
-            <h4 class="col-md-2"> {{ rating_form.QL2_3_inc }}</h4>
-            <h4 class="col-md-2"> {{ rating_form.QL2_3_loa }}</h4>
+            <h4 class="col-md-1 ra">RA 1.2</h4>
+            <div class="version-one">
+                <p class="col-md-4 textbox"><b>Support Sustainable Procurement Practices</b>
+                    <br>Develop sustainable procurement policies and programs to source materials and equipment from manufacturers and suppliers that implement sustainable practices.<br>
+                    <a href={% static "details/RA1.2/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <div class="version-two">
+                <p class="col-md-4 textbox"><b>Protect <u>Human Health</u> by Supporting Sustainable Procurement Practices </b>
+                    <br>Protect <u>human health</u> by developing sustainable procurement policies and programs to source materials and equipment from manufacturers and suppliers that implement sustainable practices.<br>
+                    <a href={% static "details/RA1.2/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <h4 class="col-md-2"> {{ rating_form.RA1_2_inc }}</h4>
+            <h4 class="col-md-2"> {{ rating_form.RA1_2_loa }}</h4>
             <div class="col-md-1 col-md-offset-1 box-yellow">
-                <h4 class="selected-points" id="ql23-selected-points">0</h4>
+                <h4 class="selected-points" id="ra12-selected-points">0</h4>
             </div>
             <div class="col-md-1 box-white">
-                <h4 class="possible-points" id="ql23-possible-points">0</h4>
+                <h4 class="possible-points" id="ra12-possible-points">0</h4>
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    {{ rating_form.QL2_3_exp |attr:"rows:4" }}
+                    {{ rating_form.RA1_2_exp |attr:"rows:4" }}
                     <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
                 </div>
             </div>
         </div>
         <div class='row'>
-            <div class='col-md-1'></div>
+        <div class='col-md-1'></div>
             <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
-            <h4 class="col-md-4">{{ rating_form.QL2_3_cost }}</h4>
+            <h4 class="col-md-4">{{ rating_form.RA1_2_cost }}</h4>
         </div>
     </div>
-{#STARTS QL2.5#}
+{#STARTS RA1.4#}
     <div class="container bigbox">
-        <div class="version-two-three">
-            <div class="row">
-                <div class="col-md-12 box-example-ql">
-                    <p><h4>Example: South LA Wetlands achieved <i><b>Restorative.</b></i></h4>The park includes walking and biking paths as well as bike lanes and large sidewalks adjacent to the property. To encourage alternative modes of transportation only 67 parking stalls were provided even though the traffic study estimated 170 were needed.</p>
-                </div>
-            </div>
-        </div>
-        <div class = 'hide_popup' id="dialog_ql_2_5_2" title="Credit QL 2.5">
-            <p>More than 86% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
-        </div>
-        <div class = 'hide_popup' id="dialog_ql_2_5_3" title="Credit QL 2.5">
-            <p>Less than 10% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
-        </div>
         <div class="row">
-            <h4 class="col-md-1 ql">QL2.5</h4>
-            <p class="col-md-4 textbox"><b>Encourage Alternative Modes of Transportation</b>
-                <br>Improve accessibility to non-motorized transportation and public transit. Promote alternative transportation and reduce congestion.<br>
-                <a href={% static "details/QL2.5/index.html" %} target="_blank">detail/guidance</a>
-            </p>
-            <h4 class="col-md-2"> {{ rating_form.QL2_5_inc }}</h4>
-            <h4 class="col-md-2"> {{ rating_form.QL2_5_loa }}</h4>
+            <h4 class="col-md-1 ra">RA 1.4</h4>
+            <div class="version-one">
+                <p class="col-md-4 textbox"><b>Divert Operational Waste from Landfills</b>
+                    <br>Reduce operational waste and divert waste streams from disposal to recycling and reuse.<br>
+                    <a href={% static "details/RA1.4/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <div class="version-two">
+                <p class="col-md-4 textbox"><b>Avoid Waste <u>Cost</u> by Diverting Operational Waste from Landfills</b>
+                    <br>Avoid extra <u>costs</u> by beneficially reducing and reusing operational waste and divert waste streams from disposal to recycling.<br>
+                    <a href={% static "details/RA1.4/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <h4 class="col-md-2"> {{ rating_form.RA1_4_inc }}</h4>
+            <h4 class="col-md-2"> {{ rating_form.RA1_4_loa }}</h4>
             <div class="col-md-1 col-md-offset-1 box-yellow">
-                <h4 class="selected-points" id="ql25-selected-points">0</h4>
+                <h4 class="selected-points" id="ra14-selected-points">0</h4>
             </div>
             <div class="col-md-1 box-white">
-                <h4 class="possible-points" id="ql25-possible-points">0</h4>
+                <h4 class="possible-points" id="ra14-possible-points">0</h4>
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    {{ rating_form.QL2_3_exp |attr:"rows:4" }}
+                    {{ rating_form.RA1_4_exp |attr:"rows:4" }}
                     <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
                 </div>
             </div>
         </div>
         <div class='row'>
-            <div class='col-md-1'></div>
+        <div class='col-md-1'></div>
             <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
-            <h4 class="col-md-4">{{ rating_form.QL2_5_cost }}</h4>
+            <h4 class="col-md-4">{{ rating_form.RA1_4_cost }}</h4>
         </div>
     </div>
-{#STARTS QL3.2#}
+{#STARTS RA1.5#}
     <div class="container bigbox">
-        <div class="version-two-three">
-            <div class="row">
-                <div class="col-md-12 box-example-ql">
-                    <p><h4>Example: South LA Wetlands achieved <i><b>Restorative.</b></i></h4>The project restored the overall visual character as it transformed all nine acres of the blight maintenance yard to landscaped public space for the community. Dilapidated buildings were demolished and the views from the neighboring school, church, and surrounding homes improved.</p>
-                </div>
-            </div>
-        </div>
-        <div class = 'hide_popup' id="dialog_ql_3_2_2" title="Credit QL 3.2">
-            <p>More than 84% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
-        </div>
-        <div class = 'hide_popup' id="dialog_ql_3_2_3" title="Credit QL 3.2">
-            <p>Less than 6% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
-        </div>
         <div class="row">
-            <h4 class="col-md-1 ql">QL3.2</h4>
-            <p class="col-md-4 textbox"><b>Preserve Views and Local Character</b>
-                <br>Design the project in a way that maintains the local character of the community and does not have negative impacts on community views.<br>
-                <a href={% static "details/QL3.2/index.html" %} target="_blank">detail/guidance</a>
-            </p>
-            <h4 class="col-md-2"> {{ rating_form.QL3_2_inc }}</h4>
-            <h4 class="col-md-2"> {{ rating_form.QL3_2_loa }}</h4>
+            <h4 class="col-md-1 ra">RA 1.5</h4>
+            <div class="version-one">
+                <p class="col-md-4 textbox"><b>Divert Construction Waste from Landfills</b>
+                    <br>Divert construction waste streams from disposal to recycling and reuse.<br>
+                    <a href={% static "details/RA1.5/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <div class="version-two">
+                <p class="col-md-4 textbox"><b>Avoid <u>Loss of Value</u> by Diverting Construction Waste from Landfills</b>
+                    <br>Avoid <u>losing value</u> of recyclable materials by diverting construction waste streams from disposal to recycling and reuse.<br>
+                    <a href={% static "details/RA1.5/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <h4 class="col-md-2"> {{ rating_form.RA1_5_inc }}</h4>
+            <h4 class="col-md-2"> {{ rating_form.RA1_5_loa }}</h4>
             <div class="col-md-1 col-md-offset-1 box-yellow">
-                <h4 class="selected-points" id="ql32-selected-points">0</h4>
+                <h4 class="selected-points" id="ra15-selected-points">0</h4>
             </div>
             <div class="col-md-1 box-white">
-                <h4 class="possible-points" id="ql32-possible-points">0</h4>
+                <h4 class="possible-points" id="ra15-possible-points">0</h4>
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    {{ rating_form.QL3_2_exp |attr:"rows:4" }}
+                    {{ rating_form.RA1_5_exp |attr:"rows:4" }}
                     <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
                 </div>
             </div>
         </div>
         <div class='row'>
-            <div class='col-md-1'></div>
+        <div class='col-md-1'></div>
             <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
-            <h4 class="col-md-4">{{ rating_form.QL3_2_cost }}</h4>
+            <h4 class="col-md-4">{{ rating_form.RA1_5_cost }}</h4>
         </div>
     </div>
-{#STARTS QL3.3#}
+{#STARTS RA1.6#}
     <div class="container bigbox">
-        <div class="version-two-three">
-            <div class="row">
-                <div class="col-md-12 box-example-ql">
-                    <p><h4>Example: South LA Wetlands achieved <i><b>Restorative.</b></i></h4>The project team developed wetland and riparian habitat, trails, boardwalks, and educational and public use facilities. The site minimizes discharge of pollutants from urban run-off to receiving waters.</p>
-                </div>
-            </div>
-        </div>
-        <div class = 'hide_popup' id="dialog_ql_3_3_2" title="Credit QL 3.3">
-            <p>More than 81% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
-        </div>
-        <div class = 'hide_popup' id="dialog_ql_3_3_3" title="Credit QL 3.3">
-            <p>Less than 12% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
-        </div>
         <div class="row">
-            <h4 class="col-md-1 ql">QL3.3</h4>
-            <p class="col-md-4 textbox"><b>Enhance Public Space</b>
-                <br>Improve public spaces including parks, plazas, recreational facilities, or wildlife refuges to enhance community livability.<br>
-                <a href={% static "details/QL3.3/index.html" %} target="_blank">detail/guidance</a>
-            </p>
-            <h4 class="col-md-2"> {{ rating_form.QL3_3_inc }}</h4>
-            <h4 class="col-md-2"> {{ rating_form.QL3_3_loa }}</h4>
+            <h4 class="col-md-1 ra">RA 1.6</h4>
+            <div class="version-one">
+                <p class="col-md-4 textbox"><b>Balance Earthwork on Site</b>
+                    <br>Minimize the movement of soils and other excavated materials off site to reduce environmental impacts.<br>
+                    <a href={% static "details/RA1.6/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <div class="version-two">
+                <p class="col-md-4 textbox"><b>Reduce <u>Congestion</u> Around Site by Balancing Earthwork on Site</b>
+                    <br>Decrease <u>noise and congestion</u> in the area by minimizing the movement of soils and other excavated materials off site.<br>
+                    <a href={% static "details/RA1.6/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <h4 class="col-md-2"> {{ rating_form.RA1_6_inc }}</h4>
+            <h4 class="col-md-2"> {{ rating_form.RA1_6_loa }}</h4>
             <div class="col-md-1 col-md-offset-1 box-yellow">
-                <h4 class="selected-points" id="ql33-selected-points">0</h4>
+                <h4 class="selected-points" id="ra16-selected-points">0</h4>
             </div>
             <div class="col-md-1 box-white">
-                <h4 class="possible-points" id="ql33-possible-points">0</h4>
+                <h4 class="possible-points" id="ra16-possible-points">0</h4>
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    {{ rating_form.QL3_3_exp |attr:"rows:4" }}
+                    {{ rating_form.RA1_6_exp |attr:"rows:4" }}
                     <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
                 </div>
             </div>
         </div>
         <div class='row'>
-            <div class='col-md-1'></div>
+        <div class='col-md-1'></div>
             <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
-            <h4 class="col-md-4">{{ rating_form.QL3_3_cost }}</h4>
+            <h4 class="col-md-4">{{ rating_form.RA1_5_cost }}</h4>
+        </div>
+    </div>
+{#STARTS RA2.2#}
+    <div class="container bigbox">
+        <div class="row">
+            <h4 class="col-md-1 ra">RA 2.2</h4>
+            <div class="version-one">
+                <p class="col-md-4 textbox"><b>Reduce Construction Energy Consumption</b>
+                    <br>Reduce greenhouse gases and air pollutant emissions by reducing energy consumption during construction.<br>
+                    <a href={% static "details/RA2.2/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <div class="version-two">
+                <p class="col-md-4 textbox"><b>Reduce <u>Breathing Problems</u> by Reducing Construction Energy</b>
+                    <br>Avoid <u>breathing problems</u> and air pollutant emissions by reducing energy consumption during construction.<br>
+                    <a href={% static "details/RA2.2/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <h4 class="col-md-2"> {{ rating_form.RA2_2_inc }}</h4>
+            <h4 class="col-md-2"> {{ rating_form.RA2_2_loa }}</h4>
+            <div class="col-md-1 col-md-offset-1 box-yellow">
+                <h4 class="selected-points" id="ra22-selected-points">0</h4>
+            </div>
+            <div class="col-md-1 box-white">
+                <h4 class="possible-points" id="ra22-possible-points">0</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    {{ rating_form.RA2_2_exp |attr:"rows:4" }}
+                    <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+        <div class='col-md-1'></div>
+            <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
+            <h4 class="col-md-4">{{ rating_form.RA2_2_cost }}</h4>
+        </div>
+    </div>
+{#STARTS RA3.1#}
+    <div class="container bigbox">
+        <div class="row">
+            <h4 class="col-md-1 ra">RA 3.1</h4>
+            <div class="version-one">
+                <p class="col-md-4 textbox"><b>Preserve Water Resources</b>
+                    <br>Assess and reduce the negative net impact on fresh water availability, quantity, and quality at a watershed scale to positively impact the region’s water resources.<br>
+                    <a href={% static "details/RA3.1/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <div class="version-two">
+                <p class="col-md-4 textbox"><b>Prevent <u>financial and resource</u> Waste by Preserving Water Resources</b>
+                    <br>Prevent large <u>financial and resource</u> waste by reducing the net impacts on fresh water availability, quantity, and quality at a watershed scale.<br>
+                    <a href={% static "details/RA3.1/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <h4 class="col-md-2"> {{ rating_form.RA3_1_inc }}</h4>
+            <h4 class="col-md-2"> {{ rating_form.RA3_1_loa }}</h4>
+            <div class="col-md-1 col-md-offset-1 box-yellow">
+                <h4 class="selected-points" id="ra31-selected-points">0</h4>
+            </div>
+            <div class="col-md-1 box-white">
+                <h4 class="possible-points" id="ra31-possible-points">0</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    {{ rating_form.RA3_1_exp |attr:"rows:4" }}
+                    <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+        <div class='col-md-1'></div>
+            <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
+            <h4 class="col-md-4">{{ rating_form.RA3_1_cost }}</h4>
+        </div>
+    </div>
+{#STARTS RA3.2#}
+    <div class="container bigbox">
+        <div class="row">
+            <h4 class="col-md-1 ra">RA 3.2</h4>
+            <div class="version-one">
+                <p class="col-md-4 textbox"><b>Reduce Operational Water Consumption</b>
+                    <br>Reduce overall water consumption to meet water needs.<br>
+                    <a href={% static "details/RA3.2/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <div class="version-two">
+                <p class="col-md-4 textbox"><b>Reduce Cost Through Efficienct Operational Water Consumption</b>
+                    <br>Reduce <u>maintenance and labor costs</u> by reducing overall water consumption over the project life.<br>
+                    <a href={% static "details/RA3.2/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <h4 class="col-md-2"> {{ rating_form.RA3_2_inc }}</h4>
+            <h4 class="col-md-2"> {{ rating_form.RA3_2_loa }}</h4>
+            <div class="col-md-1 col-md-offset-1 box-yellow">
+                <h4 class="selected-points" id="ra32-selected-points">0</h4>
+            </div>
+            <div class="col-md-1 box-white">
+                <h4 class="possible-points" id="ra32-possible-points">0</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    {{ rating_form.RA3_2_exp |attr:"rows:4" }}
+                    <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+        <div class='col-md-1'></div>
+            <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
+            <h4 class="col-md-4">{{ rating_form.RA3_2_cost }}</h4>
+        </div>
+    </div>
+{#STARTS RA3.3#}
+    <div class="container bigbox">
+        <div class="row">
+            <h4 class="col-md-1 ra">RA 3.3</h4>
+            <div class="version-one">
+                <p class="col-md-4 textbox"><b>Reduce Construction Water Consumption</b>
+                    <br>Reduce potable water consumption during construction.<br>
+                    <a href={% static "details/RA3.3/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <div class="version-two">
+                <p class="col-md-4 textbox"><b>Reduce Cost Through Efficienct Water Consumption During Construction</b>
+                    <br>Reduce <u>construction costs</u> by minimizing potable water consumption during construction.<br>
+                    <a href={% static "details/RA3.3/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <h4 class="col-md-2"> {{ rating_form.RA3_3_inc }}</h4>
+            <h4 class="col-md-2"> {{ rating_form.RA3_3_loa }}</h4>
+            <div class="col-md-1 col-md-offset-1 box-yellow">
+                <h4 class="selected-points" id="ra33-selected-points">0</h4>
+            </div>
+            <div class="col-md-1 box-white">
+                <h4 class="possible-points" id="ra33-possible-points">0</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    {{ rating_form.RA3_3_exp |attr:"rows:4" }}
+                    <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+        <div class='col-md-1'></div>
+            <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
+            <h4 class="col-md-4">{{ rating_form.RA3_3_cost }}</h4>
         </div>
     </div>
 {#BEGINS NATURAL WORLD#}
@@ -272,69 +386,96 @@
             <h3 class="category-title">Natural World</h3>
         </div>
     </div>
-{#NW1.2#}
+{#STARTS NW1.1#}
     <div class="container bigbox">
-        <div class="version-two-three">
-            <div class="row">
-                <div class="col-md-12 box-example-nw">
-                    <p><h4>Example: South LA Wetlands achieved <i><b>Restorative.</b></i></h4>A wetland with riparian and emergent marsh habitat was created at the center of a densely populated urban community. The project team and city changed the land use designation of the site from Light Industrial to Open Space in order to ensure the continued use of the site as a wetland park.</p>
-                </div>
-            </div>
-        </div>
-        <div class = 'hide_popup' id="dialog_nw_1_2_2" title="Credit NW 1.2">
-            <p>More than 80% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
-        </div>
-        <div class = 'hide_popup' id="dialog_nw_1_2_3" title="Credit NW 1.2">
-            <p>Less than 15% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
-        </div>
         <div class="row">
-            <h4 class="col-md-1 nw">NW1.2</h4>
-            <p class="col-md-4 textbox"><b>Protect Wetlands and Surface Water</b>
-                <br>Protect, buffer, enhance, and restore areas designated as wetlands, shorelines, and waterbodies by providing natural buffer zones, vegetation, and soil-protection zones.<br>
-                <a href={% static "details/NW1.2/index.html" %} target="_blank">detail/guidance</a>
-            </p>
-            <h4 class="col-md-2"> {{ rating_form.NW1_2_inc }}</h4>
-            <h4 class="col-md-2"> {{ rating_form.NW1_2_loa }}</h4>
+            <h4 class="col-md-1 nw">NW 1.1</h4>
+            <div class="version-one">
+                <p class="col-md-4 textbox"><b>Preserve Sites of High Ecological Value</b>
+                    <br>Avoid placing the project and temporary works on a site that has been identified as being of high ecological value.<br>
+                    <a href={% static "details/NW1.1/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <div class="version-two">
+                <p class="col-md-4 textbox"><b>Prevent <u>Lose of Value</u> to Sites of High Ecological Importance</b>
+                    <br>Prevent the <u>loss of value</u> to the community by avoiding the placement of projects and temporary works on a site that has been identified as being of high ecological value.<br>
+                    <a href={% static "details/NW1.1/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <h4 class="col-md-2"> {{ rating_form.NW1_1_inc }}</h4>
+            <h4 class="col-md-2"> {{ rating_form.NW1_1_loa }}</h4>
             <div class="col-md-1 col-md-offset-1 box-yellow">
-                <h4 class="selected-points" id="nw12-selected-points">0</h4>
+                <h4 class="selected-points" id="nw11-selected-points">0</h4>
             </div>
             <div class="col-md-1 box-white">
-                <h4 class="possible-points" id="nw12-possible-points">0</h4>
+                <h4 class="possible-points" id="nw11-possible-points">0</h4>
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    {{ rating_form.NW1_2_exp |attr:"rows:4" }}
+                    {{ rating_form.NW1_1_exp |attr:"rows:4" }}
                     <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
                 </div>
             </div>
         </div>
         <div class='row'>
-            <div class='col-md-1'></div>
+        <div class='col-md-1'></div>
             <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
-            <h4 class="col-md-4">{{ rating_form.NW1_2_cost }}</h4>
+            <h4 class="col-md-4">{{ rating_form.NW1_1_cost }}</h4>
         </div>
     </div>
-{#NW2.3#}
+{#STARTS NW2.2#}
     <div class="container bigbox">
-        <div class="version-two-three">
+        <div class="row">
+            <h4 class="col-md-1 nw">NW 2.2</h4>
+            <div class="version-one">
+                <p class="col-md-4 textbox"><b>Manage Storm-water</b>
+                    <br>Minimize the impact of development on storm-water runoff quantity, rate, and quality.<br>
+                    <a href={% static "details/NW2.2/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <div class="version-two">
+                <p class="col-md-4 textbox"><b>Prevent <u>Property Damage</u> by Managing Storm-water</b>
+                    <br>Prevent <u>damage to property</u> by minimizing the impact of development on storm-water runoff quantity, rate, and quality.<br>
+                    <a href={% static "details/NW2.2/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <h4 class="col-md-2"> {{ rating_form.NW2_2_inc }}</h4>
+            <h4 class="col-md-2"> {{ rating_form.NW2_2_loa }}</h4>
+            <div class="col-md-1 col-md-offset-1 box-yellow">
+                <h4 class="selected-points" id="nw22-selected-points">0</h4>
+            </div>
+            <div class="col-md-1 box-white">
+                <h4 class="possible-points" id="nw22-possible-points">0</h4>
+            </div>
             <div class="row">
-                <div class="col-md-12 box-example-nw">
-                    <p><h4>Example: South LA Wetlands achieved <i><b>Restorative.</b></i></h4><p>The project team designed for 100% collection of dry weather runoff from the regional storm drain network. All wetland cells are lined with a primary geosynthetic clay liner to form an impermeable layer that 1) prevents water loss via infiltration and 2) prevents infiltration into the former Brownfield site.</p>
+                <div class="col-md-6">
+                    {{ rating_form.NW2_2_exp |attr:"rows:4" }}
+                    <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
                 </div>
             </div>
         </div>
-        <div class = 'hide_popup' id="dialog_nw_2_3_2" title="Credit NW 2.3">
-            <p>More than 89% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
+        <div class='row'>
+        <div class='col-md-1'></div>
+            <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
+            <h4 class="col-md-4">{{ rating_form.NW2_2_cost }}</h4>
         </div>
-        <div class = 'hide_popup' id="dialog_nw_2_3_3" title="Credit NW 2.3">
-            <p>Less than 12% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
-        </div>
+    </div>
+{#STARTS NW2.3#}
+    <div class="container bigbox">
         <div class="row">
-            <h4 class="col-md-1 nw">NW2.3</h4>
-            <p class="col-md-4 textbox"><b>Prevent Surface and Groundwater Contamination</b>
-                <br>Preserve freshwater resources by incorporating measures to prevent pollutants from contaminating surface and groundwater and monitor impacts over operations.<br>
-                <a href={% static "details/NW2.3/index.html" %} target="_blank">detail/guidance</a>
-            </p>
+            <h4 class="col-md-1 nw">NW 2.3</h4>
+            <div class="version-one">
+                <p class="col-md-4 textbox"><b>Reduce Pesticide and Fertilizer Impacts </b>
+                    <br>Reduce non-point-source pollution by reducing the quantity, toxicity, bioavailability, and persistence of pesticides and fertilizers.<br>
+                    <a href={% static "details/NW2.3/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <div class="version-two">
+                <p class="col-md-4 textbox"><b>Reduce risks to <u>Human Health</u> by Reducing Pesticide and Fertilizer Impacts</b>
+                    <br>Avoid risks to <u>human health</u> by reducing the quantity, toxicity, bioavailability, and persistence of pesticides and fertilizers.<br>
+                    <a href={% static "details/NW2.3/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
             <h4 class="col-md-2"> {{ rating_form.NW2_3_inc }}</h4>
             <h4 class="col-md-2"> {{ rating_form.NW2_3_loa }}</h4>
             <div class="col-md-1 col-md-offset-1 box-yellow">
@@ -351,51 +492,83 @@
             </div>
         </div>
         <div class='row'>
-            <div class='col-md-1'></div>
+        <div class='col-md-1'></div>
             <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
             <h4 class="col-md-4">{{ rating_form.NW2_3_cost }}</h4>
         </div>
     </div>
-{#NW3.4#}
+{#STARTS NW2.4#}
     <div class="container bigbox">
-        <div class="version-two-three">
-            <div class="row">
-                <div class="col-md-12 box-example-nw">
-                    <h4>Example: South LA Wetlands achieved <i><b>Restorative.</b></i></h4><p>A wetland with riparian and emergent marsh habitat was created at the center of a densely populated urban community. The project is designed to divert stormwater runoff from the adjacent 63” storm drain and use the runoff as a resource to sustain the constructed wetland and its natural habitat.</p>
-                </div>
-            </div>
-        </div>
-        <div class = 'hide_popup' id="dialog_nw_3_4_2" title="Credit NW 3.4">
-            <p>More than 90% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
-        </div>
-        <div class = 'hide_popup' id="dialog_nw_3_4_3" title="Credit NW 3.4">
-            <p>Less than 10% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
-        </div>
         <div class="row">
-            <h4 class="col-md-1 nw">NW3.4</h4>
-            <p class="col-md-4 textbox"><b>Maintain Wetland and Surface Water Functions</b>
-                <br>Maintain and restore the ecosystem functions of streams, wetlands, water bodies and their riparian areas.<br>
-                <a href={% static "details/NW3.4/index.html" %} target="_blank">detail/guidance</a>
-            </p>
-            <h4 class="col-md-2"> {{ rating_form.NW3_4_inc }}</h4>
-            <h4 class="col-md-2"> {{ rating_form.NW3_4_loa }}</h4>
+            <h4 class="col-md-1 nw">NW 2.4</h4>
+            <div class="version-one">
+                <p class="col-md-4 textbox"><b>Protect Surface and Ground Water Quality</b>
+                    <br>Preserve water resources by incorporating measures to prevent pollutants from contaminating surface and groundwater and monitor impacts during construction and operations.<br>
+                    <a href={% static "details/NW2.4/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <div class="version-two">
+                <p class="col-md-4 textbox"><b>Avoid <u>Health Issues</u> by Protecting Surface and Ground Water Quality</b>
+                    <br>Avoid <u>health issues</u> from contact with contaminated water by preserving water resources and incorporating measures to prevent pollutants from contaminating surface and groundwater.<br>
+                    <a href={% static "details/NW2.4/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <h4 class="col-md-2"> {{ rating_form.NW2_4_inc }}</h4>
+            <h4 class="col-md-2"> {{ rating_form.NW2_4_loa }}</h4>
             <div class="col-md-1 col-md-offset-1 box-yellow">
-                <h4 class="selected-points" id="nw34-selected-points">0</h4>
+                <h4 class="selected-points" id="nw24-selected-points">0</h4>
             </div>
             <div class="col-md-1 box-white">
-                <h4 class="possible-points" id="nw34-possible-points">0</h4>
+                <h4 class="possible-points" id="nw24-possible-points">0</h4>
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    {{ rating_form.NW3_4_exp |attr:"rows:4" }}
+                    {{ rating_form.NW2_4_exp |attr:"rows:4" }}
                     <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
                 </div>
             </div>
         </div>
         <div class='row'>
-            <div class='col-md-1'></div>
+        <div class='col-md-1'></div>
             <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
-            <h4 class="col-md-4">{{ rating_form.NW3_4_cost }}</h4>
+            <h4 class="col-md-4">{{ rating_form.NW2_4_cost }}</h4>
+        </div>
+    </div>
+{#STARTS NW3.1#}
+    <div class="container bigbox">
+        <div class="row">
+            <h4 class="col-md-1 nw">NW 3.1</h4>
+            <div class="version-one">
+                <p class="col-md-4 textbox"><b>Enhance Functional Terrestrial Habitats</b>
+                    <br>Preserve and improve the functionality of the site and the surrounding natural habitat, and ensure at minimum a no net loss of habitat area and function.<br>
+                    <a href={% static "details/NW3.1/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <div class="version-two">
+                <p class="col-md-4 textbox"><b>Avoid <u>Loss of Value</u> by Enhancing Functional Terrestrial Habitats</b>
+                    <br>Avoid the <u>loss of value</u> to the region by preserving and improving the functionality of the site and the surrounding natural habitat.<br>
+                    <a href={% static "details/NW3.1/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <h4 class="col-md-2"> {{ rating_form.NW3_1_inc }}</h4>
+            <h4 class="col-md-2"> {{ rating_form.NW3_1_loa }}</h4>
+            <div class="col-md-1 col-md-offset-1 box-yellow">
+                <h4 class="selected-points" id="nw31-selected-points">0</h4>
+            </div>
+            <div class="col-md-1 box-white">
+                <h4 class="possible-points" id="nw31-possible-points">0</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    {{ rating_form.NW3_1_exp |attr:"rows:4" }}
+                    <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+        <div class='col-md-1'></div>
+            <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
+            <h4 class="col-md-4">{{ rating_form.NW3_1_cost }}</h4>
         </div>
     </div>
 {#Climate and Risk#}
@@ -405,88 +578,41 @@
             <h3 class="category-title">Climate and Risk</h3>
         </div>
     </div>
-{#STARTS CR1.1#}
+{#STARTS RR1.1#}
     <div class="container bigbox">
-        <div class="version-two-three">
-            <div class="row">
-                <div class="col-md-12 box-example-cr">
-                    <h4>Example: South LA Wetlands achieved <i><b>Restorative.</b></i></h4><p>The project team converted the land use designation of the site from Light Industrial to Open Space. According to the project’s Environmental Impact Report (EIR), green house gas (GHG) emissions would be reduced following implementation of the South Los Angeles Wetland Park.</p>
-                </div>
-            </div>
-        </div>
-        <div class = 'hide_popup' id="dialog_cr_1_1_2" title="Credit CR 1.1">
-            <p>More than 92% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
-        </div>
-        <div class = 'hide_popup' id="dialog_cr_1_1_3" title="Credit NW 1.1">
-            <p>Less than 7% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
-        </div>
         <div class="row">
-            <h4 class="col-md-1 cr">CR1.1</h4>
-            <p class="col-md-4 textbox"><b>Reduce Greenhouse Gas Emissions</b>
-                <br>Conduct a comprehensive life-cycle carbon analysis and use this assessment to reduce the anticipated amount of net greenhouse gas emissions during the life cycle of the project, reducing project contribution to climate change.<br>
-                <a href={% static "details/CR1.1/index.html" %} target="_blank">detail/guidance</a>
-            </p>
-            <h4 class="col-md-2"> {{ rating_form.CR1_1_inc }}</h4>
-            <h4 class="col-md-2"> {{ rating_form.CR1_1_loa }}</h4>
+            <h4 class="col-md-1 nw">RR 1.1</h4>
+            <div class="version-one">
+                <p class="col-md-4 textbox"><b>Reduce Greenhouse Gas Emissions</b>
+                    <br>Reduce greenhouse gas emissions during the operation of the project, reducing project contribution to climate change.<br>
+                    <a href={% static "details/RR1.1/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <div class="version-two">
+                <p class="col-md-4 textbox"><b>Avoid <u>Health Problems</u> by Reducing Greenhouse Gas Emissions</b>
+                    <br>Reduce <u>health problems</u> casued by particulate matter in greenhouse gas emissions produced during the operation of the project.<br>
+                    <a href={% static "details/RR1.1/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+            </div>
+            <h4 class="col-md-2"> {{ rating_form.RR1_1_inc }}</h4>
+            <h4 class="col-md-2"> {{ rating_form.RR1_1_loa }}</h4>
             <div class="col-md-1 col-md-offset-1 box-yellow">
-                <h4 class="selected-points" id="cr11-selected-points">0</h4>
+                <h4 class="selected-points" id="rr11-selected-points">0</h4>
             </div>
             <div class="col-md-1 box-white">
-                <h4 class="possible-points" id="cr11-possible-points">0</h4>
+                <h4 class="possible-points" id="rr11-possible-points">0</h4>
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    {{ rating_form.CR1_1_exp |attr:"rows:4" }}
+                    {{ rating_form.RR1_1_exp |attr:"rows:4" }}
                     <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
                 </div>
             </div>
         </div>
         <div class='row'>
-            <div class='col-md-1'></div>
+        <div class='col-md-1'></div>
             <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
-            <h4 class="col-md-4">{{ rating_form.CR1_1_cost }}</h4>
-        </div>
-    </div>
-{#STARTS CR2.2#}
-    <div class="container bigbox">
-        <div class="version-two-three">
-            <div class="row">
-                <div class="col-md-12 box-example-cr">
-                    <p><h4>Example: South LA Wetlands achieved <i><b>Restorative.</b></i></h4>Using sluice gates and end caps for orficies, the wetland was broken into three cells allowing them to operate independently. This flexibility provides opportunity to reconfigure the wetland in the event that source water is reduced (i.e. consider converting one of the wetlands to park).</p>
-                </div>
-            </div>
-        </div>
-        <div class = 'hide_popup' id="dialog_cr_2_2_2" title="Credit CR 1.1">
-            <p>More than 91% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
-        </div>
-        <div class = 'hide_popup' id="dialog_cr_2_2_3" title="Credit CR 1.1">
-            <p>Less than 17% of Envision projects are able to meet <b>Restorative</b> level of achievement for this credit.</p>
-        </div>
-        <div class="row">
-            <h4 class="col-md-1 cr">CR2.2</h4>
-            <p class="col-md-4 textbox"><b>Avoid Traps and Vulnerabilities </b>
-                <br>Avoid traps and vulnerabilities that could create high, long-term costs and risks for the affected communities.<br>
-                <a href={% static "details/CR2.2/index.html" %} target="_blank">detail/guidance</a>
-            </p>
-            <h4 class="col-md-2"> {{ rating_form.CR2_2_inc }}</h4>
-            <h4 class="col-md-2"> {{ rating_form.CR2_2_loa }}</h4>
-            <div class="col-md-1 col-md-offset-1 box-yellow">
-                <h4 class="selected-points" id="cr22-selected-points">0</h4>
-            </div>
-            <div class="col-md-1 box-white">
-                <h4 class="possible-points" id="cr22-possible-points">0</h4>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    {{ rating_form.CR2_2_exp |attr:"rows:4" }}
-                    <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
-                </div>
-            </div>
-        </div>
-        <div class='row'>
-            <div class='col-md-1'></div>
-            <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
-            <h4 class="col-md-4">{{ rating_form.CR2_2_cost }}</h4>
+            <h4 class="col-md-4">{{ rating_form.RR1_1_cost }}</h4>
         </div>
     </div>
     {{ rating_form.total_time }}
@@ -496,7 +622,6 @@
         </button>
     </div>
 </form>
-
 <div class="data">
     {{ engineer.version }}
 </div>

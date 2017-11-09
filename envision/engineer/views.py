@@ -48,8 +48,10 @@ def display_engineer(request, pk):
             rating.save()
             if engineer.version == 1:
                 return redirect('http://www.envisiontrain.me/static/surveys/survey1.html')
+                # return redirect('https://virginiatech.qualtrics.com/jfe/form/SV_1TUgcHmTgUA5neZ')
             elif engineer.version == 2:
                 return redirect('http://www.envisiontrain.me/static/surveys/survey2.html')
+                # return redirect('https://virginiatech.qualtrics.com/jfe/form/SV_e2JuPCzKKYDvW97')
             # elif engineer.version == 3:
             #     return redirect('http://www.envisiontrain.me/static/surveys/survey3.html')
     return render(request, "engineer/rating_form.html", {'rating_form': rating_form, "engineer": engineer,})
@@ -60,16 +62,21 @@ def display_engineer(request, pk):
 class RatingCreate(CreateView):
 
     model = Rating
-    fields = ['QL1_2_inc', 'QL1_2_loa', 'QL1_2_exp', 'QL1_2_cost',
-            'QL2_3_inc', 'QL2_3_loa', 'QL2_3_exp', 'QL2_3_cost',
-            'QL2_5_inc', 'QL2_5_loa', 'QL2_5_exp', 'QL2_5_cost',
-            'QL3_2_inc', 'QL3_2_loa', 'QL3_2_exp', 'QL3_2_cost',
-            'QL3_3_inc', 'QL3_3_loa', 'QL3_3_exp', 'QL3_3_cost',
-            'NW1_2_inc', 'NW1_2_loa', 'NW1_2_exp', 'NW1_2_cost',
+    fields = ['RA1_1_inc', 'RA1_1_loa', 'RA1_1_exp', 'RA1_1_cost',
+            'RA1_2_inc', 'RA1_2_loa', 'RA1_2_exp', 'RA1_2_cost',
+            'RA1_4_inc', 'RA1_4_loa', 'RA1_4_exp', 'RA1_4_cost',
+            'RA1_5_inc', 'RA1_5_loa', 'RA1_5_exp', 'RA1_5_cost',
+            'RA1_6_inc', 'RA1_6_loa', 'RA1_6_exp', 'RA1_6_cost',
+            'RA2_2_inc', 'RA2_2_loa', 'RA2_2_exp', 'RA2_2_cost',
+            'RA3_1_inc', 'RA3_1_loa', 'RA3_1_exp', 'RA3_1_cost',
+            'RA3_2_inc', 'RA3_2_loa', 'RA3_2_exp', 'RA3_2_cost',
+            'RA3_3_inc', 'RA3_3_loa', 'RA3_3_exp', 'RA3_3_cost',
+            'NW1_1_inc', 'NW1_1_loa', 'NW1_1_exp', 'NW1_1_cost',
+            'NW2_2_inc', 'NW2_2_loa', 'NW2_2_exp', 'NW2_2_cost',
             'NW2_3_inc', 'NW2_3_loa', 'NW2_3_exp', 'NW2_3_cost',
-            'NW3_4_inc', 'NW3_4_loa', 'NW3_4_exp', 'NW3_4_cost',
-            'CR1_1_inc', 'CR1_1_loa', 'CR1_1_exp', 'CR1_1_cost',
-            'CR2_2_inc', 'CR2_2_loa', 'CR2_2_exp', 'CR2_2_cost']
+            'NW2_4_inc', 'NW2_4_loa', 'NW2_4_exp', 'NW2_4_cost',
+            'NW3_1_inc', 'NW3_1_loa', 'NW3_1_exp', 'NW3_1_cost',
+            'RR1_1_inc', 'RR1_1_loa', 'RR1_1_exp', 'RR1_1_cost']
 
 
 

@@ -165,11 +165,11 @@ img {
     padding: 0.5%;
     border-color: lightgrey;
 }
-.box-example-ql {
+.box-example-ra {
     border-radius: 3px;
     border-style: solid;
     border-width: 1px;
-    border-color: rgba(229, 103, 23, 0.8);
+    border-color: rgba(139,69,19, 0.8);
     background-color: white;
 }
 .box-example-ld {
@@ -221,14 +221,14 @@ img {
 .cost{
     margin-left: 5px;
 }
-.quality {
+.resource {
     height: 4em;
     margin-top: 5em;
-    background-color: rgba(229, 103, 23, 0.8);
+    background-color: rgba(139,69,19, 0.8);
     border-radius: 3px;
 }
-.ql {
-    color: rgba(229, 103, 23, 0.8);
+.ra {
+    color: rgba(139,69,19, 0.8);
     padding-left: 0.5em;
 }
 
@@ -263,12 +263,16 @@ img {
     padding-left: 0.5em;
 }
 
-.credits-ql {
-    background-color: rgba(229, 103, 23, 0.8);
+.credits-ra {
+    background-color: rgba(139,69,19, 0.8);
     border-radius: 3px;
 }
 
-.version-two-three{
+.version-one{
+    display: none;
+}
+
+.version-two{
     display: none;
 }
 
