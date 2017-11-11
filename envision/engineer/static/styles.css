@@ -247,19 +247,19 @@ img {
 .ra {
     color: rgba(139,69,19, 0.8);
     padding-left: 0.5em;
-    text-align: center;
+    text-align: right;
 }
 .ra-title {
     color: rgba(139,69,19, 0.8);
     padding-left: 0.5em;
-    text-align: center;
-    background-color: #F8F8F8;
+    padding-top: 0.5em;
+    text-align: left;
+    /*background-color: #F8F8F8;*/
 }
 .intent {
     color: rgba(139,69,19, 0.8);
     padding-left: 0.5em;
     text-align: center;
-    font-style: italic;
 }
 
 .category-title {
