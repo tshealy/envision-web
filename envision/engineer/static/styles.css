@@ -207,8 +207,6 @@ img {
     border-width: 0px;
     /*border-color: rgba(229, 103, 23, 0.8);*/
     background-color: #FFFF99;
-    padding-top: 5px;
-    padding-top: 10px;
 }
 .textbox2 {
     border-radius: 3px;
@@ -251,8 +249,8 @@ img {
 }
 .ra-title {
     color: rgba(139,69,19, 0.8);
-    padding-left: 0.5em;
-    padding-top: 0.5em;
+    /*padding-left: 0.5em;*/
+    /*padding-top: 1em;*/
     text-align: left;
     /*background-color: #F8F8F8;*/
 }
@@ -261,7 +259,9 @@ img {
     padding-left: 0.5em;
     text-align: center;
 }
-
+.left {
+    text-align: left;
+}
 .category-title {
    line-height: 2.5em;
 }

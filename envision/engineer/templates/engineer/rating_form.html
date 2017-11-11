@@ -94,18 +94,18 @@
                 <h4 class="ra">RA 1.2:</h4>
         </div>
         <div class="version-one">
-            <h4 class="col-md-4 ra-title">Support Sustainable Procurement Practices
-        </h4>
+            <h4 class="col-md-5 ra-title">Support Sustainable Procurement Practices
+            </h4>
         </div>
         <div class="version-two">
-            <p class="col-md-4 ra-title"><b>Protect <u>Human Health</u> by Supporting Sustainable Procurement Practices</b>
-            </p>
+            <h4 class="col-md-5 ra-title">Protect <u>Human Health</u> by Supporting Sustainable Procurement Practices
+            </h4>
         </div>
         <div>
-            <h4 class="col-md-2"> {{ rating_form.RA1_2_inc }}</h4>
-            <h4 class="col-md-2"> {{ rating_form.RA1_2_loa }}</h4>
+            <h4 class="col-md-2 left"> {{ rating_form.RA1_2_inc }}</h4>
+            <h4 class="col-md-2 left"> {{ rating_form.RA1_2_loa }}</h4>
         </div>
-            <div class="col-md-1 col-md-offset-1 box-yellow">
+            <div class="col-md-1 box-yellow">
                 <h4 class="selected-points" id="ra12-selected-points">0</h4>
             </div>
             <div class="col-md-1 box-white">
@@ -118,23 +118,25 @@
                 <p class='intent'>(make sure to read)</p>
             </div>
                 <div class="version-one">
-                    <div class="col-md-4 intent-textbox"><b>Develop sustainable procurement policies and programs to source materials and equipment from manufacturers and suppliers that implement sustainable practices.</b><br>
+                    <div class="col-md-5 intent-textbox">
+                        <p>Develop sustainable procurement policies and programs to source materials and equipment from manufacturers and suppliers.</p>
                         <a href={% static "details/RA1.2/index.html" %} target="_blank">More detail and guidance</a>
                     </div>
                 </div>
                 <div class="version-two">
-                    <div class="col-md-4 intent-textbox"><b>Protect <u>human health</u> by developing sustainable procurement policies and programs to source materials and equipment from manufacturers and suppliers that implement sustainable practices.</b><br>
+                    <div class="col-md-5 intent-textbox">
+                        <h5><b>Protect <u>human health</u> by developing sustainable procurement policies and programs to source materials and equipment from manufacturers and suppliers.</b></h5>
                         <a href={% static "details/RA1.2/index.html" %} target="_blank">More detail and guidance</a>
                     </div>
                 </div>
-                <div class="col-md-7">
+                <div class="col-md-6">
                     {{ rating_form.RA1_2_exp |attr:"rows:4" }}
                     <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
                 </div>
             </div>
         <div class='row'>
-        <div class='col-md-5'></div>
-            <p class='col-md-5 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
+        <div class='col-md-6'></div>
+            <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
             <h4 class="col-md-2">{{ rating_form.RA1_2_cost }}</h4>
         </div>
     </div>
