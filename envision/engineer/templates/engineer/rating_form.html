@@ -829,51 +829,49 @@
 <div class="container bigbox">
     <div class="row">
         <div class="col-md-1">
-                <h4 class="cr">RR 1.1:</h4>
+            <h4 class="cr">RR 1.1:</h4>
         </div>
         <div class="version-one">
-            <h4 class="col-md-5 cr-title">Reduce Greenhouse Gas Emissions
-            </h4>
+            <h4 class="col-md-5 cr-title">Reduce Greenhouse Gas Emissions</h4>
         </div>
         <div class="version-two">
-            <h4 class="col-md-5 cr-title">Avoid <u>Health Problems</u> by Reducing Greenhouse Gas Emissions
-            </h4>
+            <h4 class="col-md-5 cr-title">Avoid <u>Health Problems</u> by Reducing Greenhouse Gas Emissions</h4>
         </div>
         <div>
             <h4 class="col-md-2 left"> {{ rating_form.RR1_1_inc }}</h4>
             <h4 class="col-md-2 left"> {{ rating_form.RR1_1_loa }}</h4>
         </div>
-            <div class="col-md-1 box-yellow">
-                <h4 class="selected-points" id="rr11-selected-points">0</h4>
-            </div>
-            <div class="col-md-1 box-white">
-                <h4 class="possible-points" id="rr11-possible-points">0</h4>
+        <div class="col-md-1 box-yellow">
+            <h4 class="selected-points" id="rr11-selected-points">0</h4>
+        </div>
+        <div class="col-md-1 box-white">
+            <h4 class="possible-points" id="rr11-possible-points">0</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class='col-md-1'>
+            <h4 class='version-one cr'>Intent:</h4>
+            <h4 class='intent-cr version-two'>INTENT:</h4>
+            <p class='intent-cr version-two'>(make sure to read)</p>
+        </div>
+        <div class="version-one">
+            <div class="col-md-5 intent-textbox-1">
+                <p>Reduce greenhouse gas emissions during the operation of the project, reducing project contribution to climate change.</p>
+                <a href={% static "details/RR1.1/index.html" %} target="_blank">More detail and guidance</a>
             </div>
         </div>
-            <div class="row">
-            <div class='col-md-1'>
-                <h4 class='version-one cr'>Intent:</h4>
-                <h4 class='intent-cr version-two'>INTENT:</h4>
-                <p class='intent-cr version-two'>(make sure to read)</p>
+        <div class="version-two">
+            <div class="col-md-5 intent-textbox-2">
+                <h5><b>Reduce <u>health problems</u> casued by particulate matter in greenhouse gas emissions produced during the operation of the project.</b></h5>
+                <a href={% static "details/RR1.1/index.html" %} target="_blank">More detail and guidance</a>
             </div>
-                <div class="version-one">
-                    <div class="col-md-5 intent-textbox-1">
-                        <p>Reduce greenhouse gas emissions during the operation of the project, reducing project contribution to climate change.</p>
-                        <a href={% static "details/RR1.1/index.html" %} target="_blank">More detail and guidance</a>
-                    </div>
-                </div>
-                <div class="version-two">
-                    <div class="col-md-5 intent-textbox-2">
-                        <h5><b>Reduce <u>health problems</u> casued by particulate matter in greenhouse gas emissions produced during the operation of the project.</b></h5>
-                        <a href={% static "details/RR1.1/index.html" %} target="_blank">More detail and guidance</a>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <span>{{ rating_form.RR1_1_exp |attr:"rows:4" }}</span>
-                    <p>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span></p>
-                </div>
-            </div>
-        <div class='row'>
+        </div>
+        <div class="col-md-6">
+            <span>{{ rating_form.RR1_1_exp |attr:"rows:4" }}</span>
+            <p>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span></p>
+        </div>
+    </div>
+    <div class='row'>
         <div class='col-md-6'></div>
             <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
             <h4 class="col-md-2">{{ rating_form.RR1_1_cost }}</h4>
