@@ -201,7 +201,13 @@ img {
     /*padding-top: 0px;*/
     /*padding-top: 10px;*/
 }
-.intent-textbox {
+.intent-textbox-1 {
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 0px;
+    /*border-color: rgba(229, 103, 23, 0.8);*/
+}
+.intent-textbox-2 {
     border-radius: 3px;
     border-style: solid;
     border-width: 0px;
@@ -256,8 +262,7 @@ img {
 }
 .intent {
     color: rgba(139,69,19, 0.8);
-    padding-left: 0.5em;
-    text-align: center;
+    text-align: right;
 }
 .left {
     text-align: left;
@@ -283,6 +288,17 @@ img {
     color: cadetblue;
     padding-left: 0.5em;
 }
+.cr-title {
+    color: cadetblue;
+    /*padding-left: 0.5em;*/
+    /*padding-top: 1em;*/
+    text-align: left;
+    /*background-color: #F8F8F8;*/
+}
+.intent-cr {
+    color: cadetblue;
+    text-align: right;
+}
 .natural-world {
     height: 4em;
     background-color: darkolivegreen;
@@ -291,6 +307,17 @@ img {
 .nw {
     color: darkolivegreen;
     padding-left: 0.5em;
+}
+.nw-title {
+    color: darkolivegreen;
+    /*padding-left: 0.5em;*/
+    /*padding-top: 1em;*/
+    text-align: left;
+    /*background-color: #F8F8F8;*/
+}
+.intent-nw {
+    color: darkolivegreen;
+    text-align: right;
 }
 
 .credits-ra {

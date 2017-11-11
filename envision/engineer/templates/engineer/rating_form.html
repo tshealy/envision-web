@@ -47,46 +47,61 @@
                 <h3 class="category-title">Resource Allocation</h3>
         </div>
         </div>
-        {#STARTS RA1.1#}
-        <div class="container bigbox">
-                <div class="row">
-                <h4 class="col-md-1 ra">RA 1.1:
-        <br><br>Intent:
-        </h4>
+{#STARTS RA1.1#}
+<div class="container bigbox">
+    <div class="row">
+        <div class="col-md-1">
+                <h4 class="ra">RA 1.1:</h4>
+        </div>
         <div class="version-one">
-                <p class="col-md-4 textbox"><b>Reduce Energy Intensity of Materials</b>
-        <br>
-        <br>Reduce the impacts of material use over the project life by using less material or specifying materials with lower net embodied energy from extraction, refinement/manufacture, and transport.<br>
-        <a href={% static "details/negative_goal_framing/Neg._RA1.1/index.html" %} target="_blank">detail/guidance</a>
-                </p>
+            <h4 class="col-md-5 ra-title">Reduce Energy Intensity of Materials
+            </h4>
+        </div>
+        <div class="version-two">
+            <h4 class="col-md-5 ra-title">Reduce <u>Cost</u> by Reducing Energy Intensity of Materials
+            </h4>
+        </div>
+        <div>
+            <h4 class="col-md-2 left"> {{ rating_form.RA1_1_inc }}</h4>
+            <h4 class="col-md-2 left"> {{ rating_form.RA1_1_loa }}</h4>
+        </div>
+            <div class="col-md-1 box-yellow">
+                <h4 class="selected-points" id="ra11-selected-points">0</h4>
+            </div>
+            <div class="col-md-1 box-white">
+                <h4 class="possible-points" id="ra11-possible-points">0</h4>
+            </div>
+        </div>
+            <div class="row">
+            <div class='col-md-1'>
+                <h4 class='version-one ra'>Intent:</h4>
+                <h4 class='intent version-two'>INTENT:</h4>
+                <p class='intent version-two'>(make sure to read)</p>
+            </div>
+                <div class="version-one">
+                    <div class="col-md-5 intent-textbox-1">
+                        <p>Reduce the impacts of material use over the project life by using less material or specifying materials with lower net embodied energy from extraction, refinement/manufacture, and transport.</p>
+                        <a href={% static "details/RA1.1/index.html" %} target="_blank">More detail and guidance</a>
+                    </div>
                 </div>
                 <div class="version-two">
-                <p class="col-md-4 textbox"><b>Reduce <u>Cost</u> of Energy Intensity of Materials</b>
-        <br>Reduce transportation <u>costs</u> over the project life by using less material that requires transportation from the manufacturer to the site.<br>
-        <a href={% static "details/RA1.1/index.html" %} target="_blank">detail/guidance</a>
-                </p>
+                    <div class="col-md-5 intent-textbox-2">
+                        <h5><b>Reduce transportation <u>costs</u> over the project life by using less material that requires transportation from the manufacturer to the site.</b></h5>
+                        <a href={% static "details/RA1.1/index.html" %} target="_blank">More detail and guidance</a>
+                    </div>
                 </div>
-                <h4 class="col-md-2"> {{ rating_form.RA1_1_inc }}</h4>
-        <h4 class="col-md-2"> {{ rating_form.RA1_1_loa }}</h4>
-        <div class="col-md-1 col-md-offset-1 box-yellow">
-                <h4 class="selected-points" id="ra11-selected-points">0</h4>
-                </div>
-                <div class="col-md-1 box-white">
-                <h4 class="possible-points" id="ra11-possible-points">0</h4>
-                </div>
-                <div class="row">
                 <div class="col-md-6">
-                {{ rating_form.RA1_1_exp |attr:"rows:4" }}
-        <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
-        </div>
-        </div>
-        </div>
+                    {{ rating_form.RA1_1_exp |attr:"rows:4" }}
+                    <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
+                </div>
+            </div>
         <div class='row'>
-                <div class='col-md-1'></div>
-                <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
-        <h4 class="col-md-4">{{ rating_form.RA1_1_cost }}</h4>
+        <div class='col-md-6'></div>
+            <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
+            <h4 class="col-md-2">{{ rating_form.RA1_1_cost }}</h4>
         </div>
-        </div>
+    </div>
+</div>
 {#STARTS RA1.2#}
 <div class="container bigbox">
     <div class="row">
@@ -114,17 +129,18 @@
         </div>
             <div class="row">
             <div class='col-md-1'>
-                <h4 class='intent'>INTENT:</h4>
-                <p class='intent'>(make sure to read)</p>
+                <h4 class='version-one ra'>Intent:</h4>
+                <h4 class='intent version-two'>INTENT:</h4>
+                <p class='intent version-two'>(make sure to read)</p>
             </div>
                 <div class="version-one">
-                    <div class="col-md-5 intent-textbox">
+                    <div class="col-md-5 intent-textbox-1">
                         <p>Develop sustainable procurement policies and programs to source materials and equipment from manufacturers and suppliers.</p>
                         <a href={% static "details/RA1.2/index.html" %} target="_blank">More detail and guidance</a>
                     </div>
                 </div>
                 <div class="version-two">
-                    <div class="col-md-5 intent-textbox">
+                    <div class="col-md-5 intent-textbox-2">
                         <h5><b>Protect <u>human health</u> by developing sustainable procurement policies and programs to source materials and equipment from manufacturers and suppliers.</b></h5>
                         <a href={% static "details/RA1.2/index.html" %} target="_blank">More detail and guidance</a>
                     </div>
@@ -140,266 +156,392 @@
             <h4 class="col-md-2">{{ rating_form.RA1_2_cost }}</h4>
         </div>
     </div>
-    </div>
+</div>
 {#STARTS RA1.4#}
-    <div class="container bigbox">
-        <div class="row">
-            <h4 class="col-md-1 ra">RA 1.4</h4>
-            <div class="version-one">
-                <p class="col-md-4 textbox"><b>Divert Operational Waste from Landfills</b>
-                    <br>Reduce operational waste and divert waste streams from disposal to recycling and reuse.<br>
-                    <a href={% static "details/RA1.4/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <div class="version-two">
-                <p class="col-md-4 textbox"><b>Avoid Waste <u>Cost</u> by Diverting Operational Waste from Landfills</b>
-                    <br>Avoid extra <u>costs</u> by beneficially reducing and reusing operational waste and divert waste streams from disposal to recycling.<br>
-                    <a href={% static "details/RA1.4/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <h4 class="col-md-2"> {{ rating_form.RA1_4_inc }}</h4>
-            <h4 class="col-md-2"> {{ rating_form.RA1_4_loa }}</h4>
-            <div class="col-md-1 col-md-offset-1 box-yellow">
+<div class="container bigbox">
+    <div class="row">
+        <div class="col-md-1">
+                <h4 class="ra">RA 1.4:</h4>
+        </div>
+        <div class="version-one">
+            <h4 class="col-md-5 ra-title">Divert Operational Waste from Landfills
+            </h4>
+        </div>
+        <div class="version-two">
+            <h4 class="col-md-5 ra-title">Avoid Waste <u>Cost</u> by Diverting Operational Waste from Landfills
+            </h4>
+        </div>
+        <div>
+            <h4 class="col-md-2 left"> {{ rating_form.RA1_4_inc }}</h4>
+            <h4 class="col-md-2 left"> {{ rating_form.RA1_4_loa }}</h4>
+        </div>
+            <div class="col-md-1 box-yellow">
                 <h4 class="selected-points" id="ra14-selected-points">0</h4>
             </div>
             <div class="col-md-1 box-white">
                 <h4 class="possible-points" id="ra14-possible-points">0</h4>
             </div>
+        </div>
             <div class="row">
+            <div class='col-md-1'>
+                <h4 class='version-one ra'>Intent:</h4>
+                <h4 class='intent version-two'>INTENT:</h4>
+                <p class='intent version-two'>(make sure to read)</p>
+            </div>
+                <div class="version-one">
+                    <div class="col-md-5 intent-textbox-1">
+                        <p>Reduce operational waste and divert waste streams from disposal to recycling and reuse.</p>
+                        <a href={% static "details/RA1.4/index.html" %} target="_blank">More detail and guidance</a>
+                    </div>
+                </div>
+                <div class="version-two">
+                    <div class="col-md-5 intent-textbox-2">
+                        <h5><b>Avoid extra <u>costs</u> by beneficially reducing and reusing operational waste and divert waste streams from disposal to recycling.</b></h5>
+                        <a href={% static "details/RA1.4/index.html" %} target="_blank">More detail and guidance</a>
+                    </div>
+                </div>
                 <div class="col-md-6">
                     {{ rating_form.RA1_4_exp |attr:"rows:4" }}
                     <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
                 </div>
             </div>
-        </div>
         <div class='row'>
-        <div class='col-md-1'></div>
+        <div class='col-md-6'></div>
             <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
-            <h4 class="col-md-4">{{ rating_form.RA1_4_cost }}</h4>
+            <h4 class="col-md-2">{{ rating_form.RA1_4_cost }}</h4>
         </div>
     </div>
+</div>
 {#STARTS RA1.5#}
-    <div class="container bigbox">
-        <div class="row">
-            <h4 class="col-md-1 ra">RA 1.5</h4>
-            <div class="version-one">
-                <p class="col-md-4 textbox"><b>Divert Construction Waste from Landfills</b>
-                    <br>Divert construction waste streams from disposal to recycling and reuse.<br>
-                    <a href={% static "details/RA1.5/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <div class="version-two">
-                <p class="col-md-4 textbox"><b>Avoid <u>Loss of Value</u> by Diverting Construction Waste from Landfills</b>
-                    <br>Avoid <u>losing value</u> of recyclable materials by diverting construction waste streams from disposal to recycling and reuse.<br>
-                    <a href={% static "details/RA1.5/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <h4 class="col-md-2"> {{ rating_form.RA1_5_inc }}</h4>
-            <h4 class="col-md-2"> {{ rating_form.RA1_5_loa }}</h4>
-            <div class="col-md-1 col-md-offset-1 box-yellow">
+<div class="container bigbox">
+    <div class="row">
+        <div class="col-md-1">
+                <h4 class="ra">RA 1.5:</h4>
+        </div>
+        <div class="version-one">
+            <h4 class="col-md-5 ra-title">Divert Construction Waste from Landfills
+            </h4>
+        </div>
+        <div class="version-two">
+            <h4 class="col-md-5 ra-title">Avoid <u>Loss of Value</u> by Diverting Construction Waste from Landfills
+            </h4>
+        </div>
+        <div>
+            <h4 class="col-md-2 left"> {{ rating_form.RA1_5_inc }}</h4>
+            <h4 class="col-md-2 left"> {{ rating_form.RA1_5_loa }}</h4>
+        </div>
+            <div class="col-md-1 box-yellow">
                 <h4 class="selected-points" id="ra15-selected-points">0</h4>
             </div>
             <div class="col-md-1 box-white">
                 <h4 class="possible-points" id="ra15-possible-points">0</h4>
             </div>
+        </div>
             <div class="row">
+            <div class='col-md-1'>
+                <h4 class='version-one ra'>Intent:</h4>
+                <h4 class='intent version-two'>INTENT:</h4>
+                <p class='intent version-two'>(make sure to read)</p>
+            </div>
+                <div class="version-one">
+                    <div class="col-md-5 intent-textbox-1">
+                        <p>Divert construction waste streams from disposal to recycling and reuse.</p>
+                        <a href={% static "details/RA1.5/index.html" %} target="_blank">More detail and guidance</a>
+                    </div>
+                </div>
+                <div class="version-two">
+                    <div class="col-md-5 intent-textbox-2">
+                        <h5><b>Avoid <u>losing value</u> of recyclable materials by diverting construction waste streams from disposal to recycling and reuse.</b></h5>
+                        <a href={% static "details/RA1.5/index.html" %} target="_blank">More detail and guidance</a>
+                    </div>
+                </div>
                 <div class="col-md-6">
                     {{ rating_form.RA1_5_exp |attr:"rows:4" }}
                     <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
                 </div>
             </div>
-        </div>
         <div class='row'>
-        <div class='col-md-1'></div>
+        <div class='col-md-6'></div>
             <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
-            <h4 class="col-md-4">{{ rating_form.RA1_5_cost }}</h4>
+            <h4 class="col-md-2">{{ rating_form.RA1_5_cost }}</h4>
         </div>
     </div>
+</div>
 {#STARTS RA1.6#}
-    <div class="container bigbox">
-        <div class="row">
-            <h4 class="col-md-1 ra">RA 1.6</h4>
-            <div class="version-one">
-                <p class="col-md-4 textbox"><b>Balance Earthwork on Site</b>
-                    <br>Minimize the movement of soils and other excavated materials off site to reduce environmental impacts.<br>
-                    <a href={% static "details/RA1.6/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <div class="version-two">
-                <p class="col-md-4 textbox"><b>Reduce <u>Congestion</u> Around Site by Balancing Earthwork on Site</b>
-                    <br>Decrease <u>noise and congestion</u> in the area by minimizing the movement of soils and other excavated materials off site.<br>
-                    <a href={% static "details/RA1.6/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <h4 class="col-md-2"> {{ rating_form.RA1_6_inc }}</h4>
-            <h4 class="col-md-2"> {{ rating_form.RA1_6_loa }}</h4>
-            <div class="col-md-1 col-md-offset-1 box-yellow">
+<div class="container bigbox">
+    <div class="row">
+        <div class="col-md-1">
+                <h4 class="ra">RA 1.6:</h4>
+        </div>
+        <div class="version-one">
+            <h4 class="col-md-5 ra-title">Balance Earthwork on Site
+            </h4>
+        </div>
+        <div class="version-two">
+            <h4 class="col-md-5 ra-title">Reduce Traffic <u>Congestion</u> Around Site by Balancing Earthwork on Site
+            </h4>
+        </div>
+        <div>
+            <h4 class="col-md-2 left"> {{ rating_form.RA1_6_inc }}</h4>
+            <h4 class="col-md-2 left"> {{ rating_form.RA1_6_loa }}</h4>
+        </div>
+            <div class="col-md-1 box-yellow">
                 <h4 class="selected-points" id="ra16-selected-points">0</h4>
             </div>
             <div class="col-md-1 box-white">
                 <h4 class="possible-points" id="ra16-possible-points">0</h4>
             </div>
+        </div>
             <div class="row">
+            <div class='col-md-1'>
+                <h4 class='version-one ra'>Intent:</h4>
+                <h4 class='intent version-two'>INTENT:</h4>
+                <p class='intent version-two'>(make sure to read)</p>
+            </div>
+                <div class="version-one">
+                    <div class="col-md-5 intent-textbox-1">
+                        <p>Minimize the movement of soils and other excavated materials off site to reduce environmental impacts.</p>
+                        <a href={% static "details/RA1.6/index.html" %} target="_blank">More detail and guidance</a>
+                    </div>
+                </div>
+                <div class="version-two">
+                    <div class="col-md-5 intent-textbox-2">
+                        <h5><b>Decrease <u>noise and congestion</u> in the area by minimizing the movement of soils and other excavated materials off site.</b></h5>
+                        <a href={% static "details/RA1.6/index.html" %} target="_blank">More detail and guidance</a>
+                    </div>
+                </div>
                 <div class="col-md-6">
                     {{ rating_form.RA1_6_exp |attr:"rows:4" }}
                     <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
                 </div>
             </div>
-        </div>
         <div class='row'>
-        <div class='col-md-1'></div>
+        <div class='col-md-6'></div>
             <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
-            <h4 class="col-md-4">{{ rating_form.RA1_5_cost }}</h4>
+            <h4 class="col-md-2">{{ rating_form.RA1_6_cost }}</h4>
         </div>
     </div>
+</div>
 {#STARTS RA2.2#}
-    <div class="container bigbox">
-        <div class="row">
-            <h4 class="col-md-1 ra">RA 2.2</h4>
-            <div class="version-one">
-                <p class="col-md-4 textbox"><b>Reduce Construction Energy Consumption</b>
-                    <br>Reduce greenhouse gases and air pollutant emissions by reducing energy consumption during construction.<br>
-                    <a href={% static "details/RA2.2/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <div class="version-two">
-                <p class="col-md-4 textbox"><b>Reduce <u>Breathing Problems</u> by Reducing Construction Energy</b>
-                    <br>Avoid <u>breathing problems</u> and air pollutant emissions by reducing energy consumption during construction.<br>
-                    <a href={% static "details/RA2.2/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <h4 class="col-md-2"> {{ rating_form.RA2_2_inc }}</h4>
-            <h4 class="col-md-2"> {{ rating_form.RA2_2_loa }}</h4>
-            <div class="col-md-1 col-md-offset-1 box-yellow">
+<div class="container bigbox">
+    <div class="row">
+        <div class="col-md-1">
+                <h4 class="ra">RA 2.2:</h4>
+        </div>
+        <div class="version-one">
+            <h4 class="col-md-5 ra-title">Reduce Construction Energy Consumption
+            </h4>
+        </div>
+        <div class="version-two">
+            <h4 class="col-md-5 ra-title">Reduce <u>Breathing Problems</u> by Reducing Construction Energy
+            </h4>
+        </div>
+        <div>
+            <h4 class="col-md-2 left"> {{ rating_form.RA2_2_inc }}</h4>
+            <h4 class="col-md-2 left"> {{ rating_form.RA2_2_loa }}</h4>
+        </div>
+            <div class="col-md-1 box-yellow">
                 <h4 class="selected-points" id="ra22-selected-points">0</h4>
             </div>
             <div class="col-md-1 box-white">
                 <h4 class="possible-points" id="ra22-possible-points">0</h4>
             </div>
+        </div>
             <div class="row">
+            <div class='col-md-1'>
+                <h4 class='version-one ra'>Intent:</h4>
+                <h4 class='intent version-two'>INTENT:</h4>
+                <p class='intent version-two'>(make sure to read)</p>
+            </div>
+                <div class="version-one">
+                    <div class="col-md-5 intent-textbox-1">
+                        <p>Reduce greenhouse gases and air pollutant emissions by reducing energy consumption during construction.</p>
+                        <a href={% static "details/RA2.2/index.html" %} target="_blank">More detail and guidance</a>
+                    </div>
+                </div>
+                <div class="version-two">
+                    <div class="col-md-5 intent-textbox-2">
+                        <h5><b>Avoid <u>breathing problems</u> and air pollutant emissions by reducing energy consumption during construction.</b></h5>
+                        <a href={% static "details/RA2.2/index.html" %} target="_blank">More detail and guidance</a>
+                    </div>
+                </div>
                 <div class="col-md-6">
                     {{ rating_form.RA2_2_exp |attr:"rows:4" }}
                     <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
                 </div>
             </div>
-        </div>
         <div class='row'>
-        <div class='col-md-1'></div>
+        <div class='col-md-6'></div>
             <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
-            <h4 class="col-md-4">{{ rating_form.RA2_2_cost }}</h4>
+            <h4 class="col-md-2">{{ rating_form.RA2_2_cost }}</h4>
         </div>
     </div>
+</div>
 {#STARTS RA3.1#}
-    <div class="container bigbox">
-        <div class="row">
-            <h4 class="col-md-1 ra">RA 3.1</h4>
-            <div class="version-one">
-                <p class="col-md-4 textbox"><b>Preserve Water Resources</b>
-                    <br>Assess and reduce the negative net impact on fresh water availability, quantity, and quality at a watershed scale to positively impact the region’s water resources.<br>
-                    <a href={% static "details/RA3.1/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <div class="version-two">
-                <p class="col-md-4 textbox"><b>Prevent <u>financial and resource</u> Waste by Preserving Water Resources</b>
-                    <br>Prevent large <u>financial and resource</u> waste by reducing the net impacts on fresh water availability, quantity, and quality at a watershed scale.<br>
-                    <a href={% static "details/RA3.1/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <h4 class="col-md-2"> {{ rating_form.RA3_1_inc }}</h4>
-            <h4 class="col-md-2"> {{ rating_form.RA3_1_loa }}</h4>
-            <div class="col-md-1 col-md-offset-1 box-yellow">
+<div class="container bigbox">
+    <div class="row">
+        <div class="col-md-1">
+                <h4 class="ra">RA 3.1:</h4>
+        </div>
+        <div class="version-one">
+            <h4 class="col-md-5 ra-title">Preserve Water Resources
+            </h4>
+        </div>
+        <div class="version-two">
+            <h4 class="col-md-5 ra-title">Prevent <u>Financial and Resource Waste</u> by Preserving Water Resources
+            </h4>
+        </div>
+        <div>
+            <h4 class="col-md-2 left"> {{ rating_form.RA3_1_inc }}</h4>
+            <h4 class="col-md-2 left"> {{ rating_form.RA3_1_loa }}</h4>
+        </div>
+            <div class="col-md-1 box-yellow">
                 <h4 class="selected-points" id="ra31-selected-points">0</h4>
             </div>
             <div class="col-md-1 box-white">
                 <h4 class="possible-points" id="ra31-possible-points">0</h4>
             </div>
+        </div>
             <div class="row">
+            <div class='col-md-1'>
+                <h4 class='version-one ra'>Intent:</h4>
+                <h4 class='intent version-two'>INTENT:</h4>
+                <p class='intent version-two'>(make sure to read)</p>
+            </div>
+                <div class="version-one">
+                    <div class="col-md-5 intent-textbox-1">
+                        <p>Assess and reduce the negative net impact on fresh water availability, quantity, and quality at a watershed scale to positively impact the region’s water resources.</p>
+                        <a href={% static "details/RA3.1/index.html" %} target="_blank">More detail and guidance</a>
+                    </div>
+                </div>
+                <div class="version-two">
+                    <div class="col-md-5 intent-textbox-2">
+                        <h5><b>Prevent large <u>financial and resource waste</u> by reducing the net impacts on fresh water availability, quantity, and quality at a watershed scale.</b></h5>
+                        <a href={% static "details/RA3.1/index.html" %} target="_blank">More detail and guidance</a>
+                    </div>
+                </div>
                 <div class="col-md-6">
                     {{ rating_form.RA3_1_exp |attr:"rows:4" }}
                     <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
                 </div>
             </div>
-        </div>
         <div class='row'>
-        <div class='col-md-1'></div>
+        <div class='col-md-6'></div>
             <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
-            <h4 class="col-md-4">{{ rating_form.RA3_1_cost }}</h4>
+            <h4 class="col-md-2">{{ rating_form.RA3_1_cost }}</h4>
         </div>
     </div>
+</div>
 {#STARTS RA3.2#}
-    <div class="container bigbox">
-        <div class="row">
-            <h4 class="col-md-1 ra">RA 3.2</h4>
-            <div class="version-one">
-                <p class="col-md-4 textbox"><b>Reduce Operational Water Consumption</b>
-                    <br>Reduce overall water consumption to meet water needs.<br>
-                    <a href={% static "details/RA3.2/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <div class="version-two">
-                <p class="col-md-4 textbox"><b>Reduce Cost Through Efficienct Operational Water Consumption</b>
-                    <br>Reduce <u>maintenance and labor costs</u> by reducing overall water consumption over the project life.<br>
-                    <a href={% static "details/RA3.2/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <h4 class="col-md-2"> {{ rating_form.RA3_2_inc }}</h4>
-            <h4 class="col-md-2"> {{ rating_form.RA3_2_loa }}</h4>
-            <div class="col-md-1 col-md-offset-1 box-yellow">
+<div class="container bigbox">
+    <div class="row">
+        <div class="col-md-1">
+                <h4 class="ra">RA 3.2:</h4>
+        </div>
+        <div class="version-one">
+            <h4 class="col-md-5 ra-title">Reduce Operational Water Consumption
+            </h4>
+        </div>
+        <div class="version-two">
+            <h4 class="col-md-5 ra-title"><u>Reduce Cost</u> Through Efficienct Operational Water Consumption
+            </h4>
+        </div>
+        <div>
+            <h4 class="col-md-2 left"> {{ rating_form.RA3_2_inc }}</h4>
+            <h4 class="col-md-2 left"> {{ rating_form.RA3_2_loa }}</h4>
+        </div>
+            <div class="col-md-1 box-yellow">
                 <h4 class="selected-points" id="ra32-selected-points">0</h4>
             </div>
             <div class="col-md-1 box-white">
                 <h4 class="possible-points" id="ra32-possible-points">0</h4>
             </div>
+        </div>
             <div class="row">
+            <div class='col-md-1'>
+                <h4 class='version-one ra'>Intent:</h4>
+                <h4 class='intent version-two'>INTENT:</h4>
+                <p class='intent version-two'>(make sure to read)</p>
+            </div>
+                <div class="version-one">
+                    <div class="col-md-5 intent-textbox-1">
+                        <p>Reduce overall water consumption to meet water needs.</p>
+                        <a href={% static "details/RA3.2/index.html" %} target="_blank">More detail and guidance</a>
+                    </div>
+                </div>
+                <div class="version-two">
+                    <div class="col-md-5 intent-textbox-2">
+                        <h5><b>Reduce <u>maintenance and labor costs</u> by reducing overall water consumption over the project life.</b></h5>
+                        <a href={% static "details/RA3.2/index.html" %} target="_blank">More detail and guidance</a>
+                    </div>
+                </div>
                 <div class="col-md-6">
                     {{ rating_form.RA3_2_exp |attr:"rows:4" }}
                     <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
                 </div>
             </div>
-        </div>
         <div class='row'>
-        <div class='col-md-1'></div>
+        <div class='col-md-6'></div>
             <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
-            <h4 class="col-md-4">{{ rating_form.RA3_2_cost }}</h4>
+            <h4 class="col-md-2">{{ rating_form.RA3_2_cost }}</h4>
         </div>
     </div>
+</div>
 {#STARTS RA3.3#}
-    <div class="container bigbox">
-        <div class="row">
-            <h4 class="col-md-1 ra">RA 3.3</h4>
-            <div class="version-one">
-                <p class="col-md-4 textbox"><b>Reduce Construction Water Consumption</b>
-                    <br>Reduce potable water consumption during construction.<br>
-                    <a href={% static "details/RA3.3/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <div class="version-two">
-                <p class="col-md-4 textbox"><b>Reduce Cost Through Efficienct Water Consumption During Construction</b>
-                    <br>Reduce <u>construction costs</u> by minimizing potable water consumption during construction.<br>
-                    <a href={% static "details/RA3.3/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <h4 class="col-md-2"> {{ rating_form.RA3_3_inc }}</h4>
-            <h4 class="col-md-2"> {{ rating_form.RA3_3_loa }}</h4>
-            <div class="col-md-1 col-md-offset-1 box-yellow">
+<div class="container bigbox">
+    <div class="row">
+        <div class="col-md-1">
+                <h4 class="ra">RA 3.3:</h4>
+        </div>
+        <div class="version-one">
+            <h4 class="col-md-5 ra-title">Reduce Construction Water Consumption
+            </h4>
+        </div>
+        <div class="version-two">
+            <h4 class="col-md-5 ra-title"><u>Reduce Cost</u> Through Efficienct Water Consumption During Construction
+            </h4>
+        </div>
+        <div>
+            <h4 class="col-md-2 left"> {{ rating_form.RA3_3_inc }}</h4>
+            <h4 class="col-md-2 left"> {{ rating_form.RA3_3_loa }}</h4>
+        </div>
+            <div class="col-md-1 box-yellow">
                 <h4 class="selected-points" id="ra33-selected-points">0</h4>
             </div>
             <div class="col-md-1 box-white">
                 <h4 class="possible-points" id="ra33-possible-points">0</h4>
             </div>
+        </div>
             <div class="row">
+            <div class='col-md-1'>
+                <h4 class='version-one ra'>Intent:</h4>
+                <h4 class='intent version-two'>INTENT:</h4>
+                <p class='intent version-two'>(make sure to read)</p>
+            </div>
+                <div class="version-one">
+                    <div class="col-md-5 intent-textbox-1">
+                        <p>Reduce potable water consumption during construction.</p>
+                        <a href={% static "details/RA3.3/index.html" %} target="_blank">More detail and guidance</a>
+                    </div>
+                </div>
+                <div class="version-two">
+                    <div class="col-md-5 intent-textbox-2">
+                        <h5><b>Reduce <u>construction costs</u> by minimizing potable water consumption during construction.</b></h5>
+                        <a href={% static "details/RA3.3/index.html" %} target="_blank">More detail and guidance</a>
+                    </div>
+                </div>
                 <div class="col-md-6">
                     {{ rating_form.RA3_3_exp |attr:"rows:4" }}
                     <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
                 </div>
             </div>
-        </div>
         <div class='row'>
-        <div class='col-md-1'></div>
+        <div class='col-md-6'></div>
             <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
-            <h4 class="col-md-4">{{ rating_form.RA3_3_cost }}</h4>
+            <h4 class="col-md-2">{{ rating_form.RA3_3_cost }}</h4>
         </div>
     </div>
+</div>
 {#BEGINS NATURAL WORLD#}
     <hr>
     <div class = "headerbox">
@@ -408,190 +550,280 @@
         </div>
     </div>
 {#STARTS NW1.1#}
-    <div class="container bigbox">
-        <div class="row">
-            <h4 class="col-md-1 nw">NW 1.1</h4>
-            <div class="version-one">
-                <p class="col-md-4 textbox"><b>Preserve Sites of High Ecological Value</b>
-                    <br>Avoid placing the project and temporary works on a site that has been identified as being of high ecological value.<br>
-                    <a href={% static "details/negative_goal_framing/Neg. NW1.1 done/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <div class="version-two">
-                <p class="col-md-4 textbox"><b>Prevent <u>Lose of Value</u> to Sites of High Ecological Importance</b>
-                    <br>Prevent the <u>loss of value</u> to the community by avoiding the placement of projects and temporary works on a site that has been identified as being of high ecological value.<br>
-                    <a href={% static "details/NW1.1/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <h4 class="col-md-2"> {{ rating_form.NW1_1_inc }}</h4>
-            <h4 class="col-md-2"> {{ rating_form.NW1_1_loa }}</h4>
-            <div class="col-md-1 col-md-offset-1 box-yellow">
+<div class="container bigbox">
+    <div class="row">
+        <div class="col-md-1">
+                <h4 class="nw">NW 1.1:</h4>
+        </div>
+        <div class="version-one">
+            <h4 class="col-md-5 nw-title">Preserve Sites of High Ecological Value
+            </h4>
+        </div>
+        <div class="version-two">
+            <h4 class="col-md-5 nw-title">Prevent <u>Lose of Value</u> to Sites of High Ecological Importance
+            </h4>
+        </div>
+        <div>
+            <h4 class="col-md-2 left"> {{ rating_form.NW1_1_inc }}</h4>
+            <h4 class="col-md-2 left"> {{ rating_form.NW1_1_loa }}</h4>
+        </div>
+            <div class="col-md-1 box-yellow">
                 <h4 class="selected-points" id="nw11-selected-points">0</h4>
             </div>
             <div class="col-md-1 box-white">
                 <h4 class="possible-points" id="nw11-possible-points">0</h4>
             </div>
+        </div>
             <div class="row">
+            <div class='col-md-1'>
+                <h4 class='version-one nw'>Intent:</h4>
+                <h4 class='intent-nw version-two'>INTENT:</h4>
+                <p class='intent-nw version-two'>(make sure to read)</p>
+            </div>
+                <div class="version-one">
+                    <div class="col-md-5 intent-textbox-1">
+                        <p>Avoid placing the project and temporary works on a site that has been identified as being of high ecological value.</p>
+                        <a href={% static "details/NW1.1/index.html" %} target="_blank">More detail and guidance</a>
+                    </div>
+                </div>
+                <div class="version-two">
+                    <div class="col-md-5 intent-textbox-2">
+                        <h5><b>Prevent the <u>loss of value</u> to the community by avoiding the placement of projects and temporary works on a site that has been identified as being of high ecological value.</b></h5>
+                        <a href={% static "details/NW1.1/index.html" %} target="_blank">More detail and guidance</a>
+                    </div>
+                </div>
                 <div class="col-md-6">
                     {{ rating_form.NW1_1_exp |attr:"rows:4" }}
                     <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
                 </div>
             </div>
-        </div>
         <div class='row'>
-        <div class='col-md-1'></div>
+        <div class='col-md-6'></div>
             <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
-            <h4 class="col-md-4">{{ rating_form.NW1_1_cost }}</h4>
+            <h4 class="col-md-2">{{ rating_form.NW1_1_cost }}</h4>
         </div>
     </div>
+</div>
 {#STARTS NW2.2#}
-    <div class="container bigbox">
-        <div class="row">
-            <h4 class="col-md-1 nw">NW 2.2</h4>
-            <div class="version-one">
-                <p class="col-md-4 textbox"><b>Manage Storm-water</b>
-                    <br>Minimize the impact of development on storm-water runoff quantity, rate, and quality.<br>
-                    <a href={% static "details/NW2.2/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <div class="version-two">
-                <p class="col-md-4 textbox"><b>Prevent <u>Property Damage</u> by Managing Storm-water</b>
-                    <br>Prevent <u>damage to property</u> by minimizing the impact of development on storm-water runoff quantity, rate, and quality.<br>
-                    <a href={% static "details/NW2.2/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <h4 class="col-md-2"> {{ rating_form.NW2_2_inc }}</h4>
-            <h4 class="col-md-2"> {{ rating_form.NW2_2_loa }}</h4>
-            <div class="col-md-1 col-md-offset-1 box-yellow">
+<div class="container bigbox">
+    <div class="row">
+        <div class="col-md-1">
+                <h4 class="nw">NW 2.2:</h4>
+        </div>
+        <div class="version-one">
+            <h4 class="col-md-5 nw-title">Manage Storm-water
+            </h4>
+        </div>
+        <div class="version-two">
+            <h4 class="col-md-5 nw-title">Prevent <u>Property Damage</u> by Managing Storm-water
+            </h4>
+        </div>
+        <div>
+            <h4 class="col-md-2 left"> {{ rating_form.NW2_2_inc }}</h4>
+            <h4 class="col-md-2 left"> {{ rating_form.NW2_2_loa }}</h4>
+        </div>
+            <div class="col-md-1 box-yellow">
                 <h4 class="selected-points" id="nw22-selected-points">0</h4>
             </div>
             <div class="col-md-1 box-white">
                 <h4 class="possible-points" id="nw22-possible-points">0</h4>
             </div>
+        </div>
             <div class="row">
+            <div class='col-md-1'>
+                <h4 class='version-one nw'>Intent:</h4>
+                <h4 class='intent-nw version-two'>INTENT:</h4>
+                <p class='intent-nw version-two'>(make sure to read)</p>
+            </div>
+                <div class="version-one">
+                    <div class="col-md-5 intent-textbox-1">
+                        <p>Minimize the impact of development on storm-water runoff quantity, rate, and quality.</p>
+                        <a href={% static "details/NW2.2/index.html" %} target="_blank">More detail and guidance</a>
+                    </div>
+                </div>
+                <div class="version-two">
+                    <div class="col-md-5 intent-textbox-2">
+                        <h5><b>Prevent <u>damage to property</u> by minimizing the impact of development on storm-water runoff quantity, rate, and quality.</b></h5>
+                        <a href={% static "details/NW2.2/index.html" %} target="_blank">More detail and guidance</a>
+                    </div>
+                </div>
                 <div class="col-md-6">
                     {{ rating_form.NW2_2_exp |attr:"rows:4" }}
                     <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
                 </div>
             </div>
-        </div>
         <div class='row'>
-        <div class='col-md-1'></div>
+        <div class='col-md-6'></div>
             <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
-            <h4 class="col-md-4">{{ rating_form.NW2_2_cost }}</h4>
+            <h4 class="col-md-2">{{ rating_form.NW2_2_cost }}</h4>
         </div>
     </div>
+</div>
 {#STARTS NW2.3#}
-    <div class="container bigbox">
-        <div class="row">
-            <h4 class="col-md-1 nw">NW 2.3</h4>
-            <div class="version-one">
-                <p class="col-md-4 textbox"><b>Reduce Pesticide and Fertilizer Impacts </b>
-                    <br>Reduce non-point-source pollution by reducing the quantity, toxicity, bioavailability, and persistence of pesticides and fertilizers.<br>
-                    <a href={% static "details/NW2.3/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <div class="version-two">
-                <p class="col-md-4 textbox"><b>Reduce risks to <u>Human Health</u> by Reducing Pesticide and Fertilizer Impacts</b>
-                    <br>Avoid risks to <u>human health</u> by reducing the quantity, toxicity, bioavailability, and persistence of pesticides and fertilizers.<br>
-                    <a href={% static "details/NW2.3/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <h4 class="col-md-2"> {{ rating_form.NW2_3_inc }}</h4>
-            <h4 class="col-md-2"> {{ rating_form.NW2_3_loa }}</h4>
-            <div class="col-md-1 col-md-offset-1 box-yellow">
+<div class="container bigbox">
+    <div class="row">
+        <div class="col-md-1">
+                <h4 class="nw">NW 2.3:</h4>
+        </div>
+        <div class="version-one">
+            <h4 class="col-md-5 nw-title">Reduce Pesticide and Fertilizer Impacts
+            </h4>
+        </div>
+        <div class="version-two">
+            <h4 class="col-md-5 nw-title">Avoid Risks to <u>Human Health</u> by reducing the quantity, toxicity, bioavailability, and persistence of pesticides and fertilizers.
+            </h4>
+        </div>
+        <div>
+            <h4 class="col-md-2 left"> {{ rating_form.NW2_3_inc }}</h4>
+            <h4 class="col-md-2 left"> {{ rating_form.NW2_3_loa }}</h4>
+        </div>
+            <div class="col-md-1 box-yellow">
                 <h4 class="selected-points" id="nw23-selected-points">0</h4>
             </div>
             <div class="col-md-1 box-white">
                 <h4 class="possible-points" id="nw23-possible-points">0</h4>
             </div>
+        </div>
             <div class="row">
+            <div class='col-md-1'>
+                <h4 class='version-one nw'>Intent:</h4>
+                <h4 class='intent-nw version-two'>INTENT:</h4>
+                <p class='intent-nw version-two'>(make sure to read)</p>
+            </div>
+                <div class="version-one">
+                    <div class="col-md-5 intent-textbox-1">
+                        <p>Reduce non-point-source pollution by reducing the quantity, toxicity, bioavailability, and persistence of pesticides and fertilizers.</p>
+                        <a href={% static "details/NW2.3/index.html" %} target="_blank">More detail and guidance</a>
+                    </div>
+                </div>
+                <div class="version-two">
+                    <div class="col-md-5 intent-textbox-2">
+                        <h5><b>Avoid risks to <u>human health</u> by reducing the quantity, toxicity, bioavailability, and persistence of pesticides and fertilizers.</b></h5>
+                        <a href={% static "details/NW2.3/index.html" %} target="_blank">More detail and guidance</a>
+                    </div>
+                </div>
                 <div class="col-md-6">
                     {{ rating_form.NW2_3_exp |attr:"rows:4" }}
                     <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
                 </div>
             </div>
-        </div>
         <div class='row'>
-        <div class='col-md-1'></div>
+        <div class='col-md-6'></div>
             <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
-            <h4 class="col-md-4">{{ rating_form.NW2_3_cost }}</h4>
+            <h4 class="col-md-2">{{ rating_form.NW2_3_cost }}</h4>
         </div>
     </div>
+</div>
 {#STARTS NW2.4#}
-    <div class="container bigbox">
-        <div class="row">
-            <h4 class="col-md-1 nw">NW 2.4</h4>
-            <div class="version-one">
-                <p class="col-md-4 textbox"><b>Protect Surface and Ground Water Quality</b>
-                    <br>Preserve water resources by incorporating measures to prevent pollutants from contaminating surface and groundwater and monitor impacts during construction and operations.<br>
-                    <a href={% static "details/NW2.4/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <div class="version-two">
-                <p class="col-md-4 textbox"><b>Avoid <u>Health Issues</u> by Protecting Surface and Ground Water Quality</b>
-                    <br>Avoid <u>health issues</u> from contact with contaminated water by preserving water resources and incorporating measures to prevent pollutants from contaminating surface and groundwater.<br>
-                    <a href={% static "details/NW2.4/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <h4 class="col-md-2"> {{ rating_form.NW2_4_inc }}</h4>
-            <h4 class="col-md-2"> {{ rating_form.NW2_4_loa }}</h4>
-            <div class="col-md-1 col-md-offset-1 box-yellow">
+<div class="container bigbox">
+    <div class="row">
+        <div class="col-md-1">
+                <h4 class="nw">NW 2.4:</h4>
+        </div>
+        <div class="version-one">
+            <h4 class="col-md-5 nw-title">Protect Surface and Ground Water Quality
+            </h4>
+        </div>
+        <div class="version-two">
+            <h4 class="col-md-5 nw-title">Avoid <u>Health Issues</u> by Protecting Surface and Ground Water Quality
+            </h4>
+        </div>
+        <div>
+            <h4 class="col-md-2 left"> {{ rating_form.NW2_4_inc }}</h4>
+            <h4 class="col-md-2 left"> {{ rating_form.NW2_4_loa }}</h4>
+        </div>
+            <div class="col-md-1 box-yellow">
                 <h4 class="selected-points" id="nw24-selected-points">0</h4>
             </div>
             <div class="col-md-1 box-white">
                 <h4 class="possible-points" id="nw24-possible-points">0</h4>
             </div>
+        </div>
             <div class="row">
+            <div class='col-md-1'>
+                <h4 class='version-one nw'>Intent:</h4>
+                <h4 class='intent-nw version-two'>INTENT:</h4>
+                <p class='intent-nw version-two'>(make sure to read)</p>
+            </div>
+                <div class="version-one">
+                    <div class="col-md-5 intent-textbox-1">
+                        <p>Preserve water resources by incorporating measures to prevent pollutants from contaminating surface and groundwater and monitor impacts during construction and operations.</p>
+                        <a href={% static "details/NW2.4/index.html" %} target="_blank">More detail and guidance</a>
+                    </div>
+                </div>
+                <div class="version-two">
+                    <div class="col-md-5 intent-textbox-2">
+                        <h5><b>Avoid <u>health issues</u> from contact with contaminated water by preserving water resources and incorporating measures to prevent pollutants from contaminating surface and groundwater.</b></h5>
+                        <a href={% static "details/NW2.4/index.html" %} target="_blank">More detail and guidance</a>
+                    </div>
+                </div>
                 <div class="col-md-6">
                     {{ rating_form.NW2_4_exp |attr:"rows:4" }}
                     <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
                 </div>
             </div>
-        </div>
         <div class='row'>
-        <div class='col-md-1'></div>
+        <div class='col-md-6'></div>
             <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
-            <h4 class="col-md-4">{{ rating_form.NW2_4_cost }}</h4>
+            <h4 class="col-md-2">{{ rating_form.NW2_4_cost }}</h4>
         </div>
     </div>
+</div>
 {#STARTS NW3.1#}
-    <div class="container bigbox">
-        <div class="row">
-            <h4 class="col-md-1 nw">NW 3.1</h4>
-            <div class="version-one">
-                <p class="col-md-4 textbox"><b>Enhance Functional Terrestrial Habitats</b>
-                    <br>Preserve and improve the functionality of the site and the surrounding natural habitat, and ensure at minimum a no net loss of habitat area and function.<br>
-                    <a href={% static "details/NW3.1/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <div class="version-two">
-                <p class="col-md-4 textbox"><b>Avoid <u>Loss of Value</u> by Enhancing Functional Terrestrial Habitats</b>
-                    <br>Avoid the <u>loss of value</u> to the region by preserving and improving the functionality of the site and the surrounding natural habitat.<br>
-                    <a href={% static "details/NW3.1/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <h4 class="col-md-2"> {{ rating_form.NW3_1_inc }}</h4>
-            <h4 class="col-md-2"> {{ rating_form.NW3_1_loa }}</h4>
-            <div class="col-md-1 col-md-offset-1 box-yellow">
+<div class="container bigbox">
+    <div class="row">
+        <div class="col-md-1">
+                <h4 class="nw">NW 3.1:</h4>
+        </div>
+        <div class="version-one">
+            <h4 class="col-md-5 nw-title">Enhance Functional Terrestrial Habitats
+            </h4>
+        </div>
+        <div class="version-two">
+            <h4 class="col-md-5 nw-title">Avoid <u>Loss of Value</u> by Enhancing Functional Terrestrial Habitats
+            </h4>
+        </div>
+        <div>
+            <h4 class="col-md-2 left"> {{ rating_form.NW3_1_inc }}</h4>
+            <h4 class="col-md-2 left"> {{ rating_form.NW3_1_loa }}</h4>
+        </div>
+            <div class="col-md-1 box-yellow">
                 <h4 class="selected-points" id="nw31-selected-points">0</h4>
             </div>
             <div class="col-md-1 box-white">
                 <h4 class="possible-points" id="nw31-possible-points">0</h4>
             </div>
+        </div>
             <div class="row">
+            <div class='col-md-1'>
+                <h4 class='version-one nw'>Intent:</h4>
+                <h4 class='intent-nw version-two'>INTENT:</h4>
+                <p class='intent-nw version-two'>(make sure to read)</p>
+            </div>
+                <div class="version-one">
+                    <div class="col-md-5 intent-textbox-1">
+                        <p>Preserve and improve the functionality of the site and the surrounding natural habitat, and ensure at minimum a no net loss of habitat area and function.</p>
+                        <a href={% static "details/NW3.1/index.html" %} target="_blank">More detail and guidance</a>
+                    </div>
+                </div>
+                <div class="version-two">
+                    <div class="col-md-5 intent-textbox-2">
+                        <h5><b>Avoid the <u>loss of value</u> to the region by preserving and improving the functionality of the site and the surrounding natural habitat.</b></h5>
+                        <a href={% static "details/NW3.1/index.html" %} target="_blank">More detail and guidance</a>
+                    </div>
+                </div>
                 <div class="col-md-6">
                     {{ rating_form.NW3_1_exp |attr:"rows:4" }}
                     <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
                 </div>
             </div>
-        </div>
         <div class='row'>
-        <div class='col-md-1'></div>
+        <div class='col-md-6'></div>
             <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
-            <h4 class="col-md-4">{{ rating_form.NW3_1_cost }}</h4>
+            <h4 class="col-md-2">{{ rating_form.NW3_1_cost }}</h4>
         </div>
     </div>
+</div>
 {#Risk and Resilience#}
     <hr>
     <div class = "headerbox">
@@ -600,48 +832,60 @@
         </div>
     </div>
 {#STARTS RR1.1#}
-    <div class="container bigbox">
-        <div class="row">
-            <h4 class="col-md-1 nw">RR 1.1</h4>
-            <div class="version-one">
-                <p class="col-md-4 textbox"><b>Reduce Greenhouse Gas Emissions</b>
-                    <br>Reduce greenhouse gas emissions during the operation of the project, reducing project contribution to climate change.<br>
-                    <a href={% static "details/RR1.1/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <div class="version-two">
-                <p class="col-md-4 textbox"><b>Avoid <u>Health Problems</u> by Reducing Greenhouse Gas Emissions</b>
-                    <br>Reduce <u>health problems</u> casued by particulate matter in greenhouse gas emissions produced during the operation of the project.<br>
-                    <a href={% static "details/RR1.1/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <h4 class="col-md-2"> {{ rating_form.RR1_1_inc }}</h4>
-            <h4 class="col-md-2"> {{ rating_form.RR1_1_loa }}</h4>
-            <div class="col-md-1 col-md-offset-1 box-yellow">
+<div class="container bigbox">
+    <div class="row">
+        <div class="col-md-1">
+                <h4 class="cr">RR 1.1:</h4>
+        </div>
+        <div class="version-one">
+            <h4 class="col-md-5 cr-title">Reduce Greenhouse Gas Emissions
+            </h4>
+        </div>
+        <div class="version-two">
+            <h4 class="col-md-5 cr-title">Avoid <u>Health Problems</u> by Reducing Greenhouse Gas Emissions
+            </h4>
+        </div>
+        <div>
+            <h4 class="col-md-2 left"> {{ rating_form.RR1_1_inc }}</h4>
+            <h4 class="col-md-2 left"> {{ rating_form.RR1_1_loa }}</h4>
+        </div>
+            <div class="col-md-1 box-yellow">
                 <h4 class="selected-points" id="rr11-selected-points">0</h4>
             </div>
             <div class="col-md-1 box-white">
                 <h4 class="possible-points" id="rr11-possible-points">0</h4>
             </div>
+        </div>
             <div class="row">
+            <div class='col-md-1'>
+                <h4 class='version-one nw'>Intent:</h4>
+                <h4 class='intent-cr version-two'>INTENT:</h4>
+                <p class='intent-cr version-two'>(make sure to read)</p>
+            </div>
+                <div class="version-one">
+                    <div class="col-md-5 intent-textbox-1">
+                        <p>Reduce greenhouse gas emissions during the operation of the project, reducing project contribution to climate change.</p>
+                        <a href={% static "details/RR1.1/index.html" %} target="_blank">More detail and guidance</a>
+                    </div>
+                </div>
+                <div class="version-two">
+                    <div class="col-md-5 intent-textbox-2">
+                        <h5><b>Reduce <u>health problems</u> casued by particulate matter in greenhouse gas emissions produced during the operation of the project.</b></h5>
+                        <a href={% static "details/RR1.1/index.html" %} target="_blank">More detail and guidance</a>
+                    </div>
+                </div>
                 <div class="col-md-6">
                     {{ rating_form.RR1_1_exp |attr:"rows:4" }}
                     <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
                 </div>
             </div>
-        </div>
         <div class='row'>
-        <div class='col-md-1'></div>
+        <div class='col-md-6'></div>
             <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
-            <h4 class="col-md-4">{{ rating_form.RR1_1_cost }}</h4>
+            <h4 class="col-md-2">{{ rating_form.RR1_1_cost }}</h4>
         </div>
     </div>
-    {{ rating_form.total_time }}
-    <div align= "center"><br>
-        <button type="button" class="submit btn btn-primary" style="width: 100px; height: 40px; font-size: 20px;">
-            Submit
-        </button>
-    </div>
+</div>
 </form>
 <div class="data">
     {{ engineer.version }}
