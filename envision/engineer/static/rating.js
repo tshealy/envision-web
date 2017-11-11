@@ -280,7 +280,7 @@ $(function() {
                    writePossiblePoints($("#ra11-possible-points"), getLastValue($("#id_RA1_1_loa")));
                    $("#id_RA1_1_loa").val('20').ready(function () {
                        $("#ra11-selected-points").text($("#id_RA1_1_loa :selected").val());
-                       $("select").parent().siblings(".row").find(".required-count").text(charCounts['Conserving']);
+                       $("select").parent().parent().siblings(".row").children(".col-md-6").find(".required-count").text(charCounts['Conserving']);
                    })
                }
                else {
@@ -299,7 +299,7 @@ $(function() {
                    writePossiblePoints($("#ra12-possible-points"), getLastValue($("#id_RA1_2_loa")));
                    $("#id_RA1_2_loa").val('12').ready(function () {
                        $("#ra12-selected-points").text($("#id_RA1_2_loa :selected").val());
-                       $("select").parent().siblings(".row").find(".required-count").text(charCounts['Conserving']);
+                       $("select").parent().parent().siblings(".row").children(".col-md-6").find(".required-count").text(charCounts['Conserving']);
                    })
                }
                else {
