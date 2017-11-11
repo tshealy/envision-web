@@ -193,7 +193,24 @@ img {
     border-color: cadetblue;
     background-color: white;
 }
-.textbox {
+.title-textbox {
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 0px;
+    /*border-color: rgba(229, 103, 23, 0.8);*/
+    /*padding-top: 0px;*/
+    /*padding-top: 10px;*/
+}
+.intent-textbox {
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 0px;
+    /*border-color: rgba(229, 103, 23, 0.8);*/
+    background-color: #FFFF99;
+    padding-top: 5px;
+    padding-top: 10px;
+}
+.textbox2 {
     border-radius: 3px;
     border-style: solid;
     border-width: 0px;
@@ -215,7 +232,7 @@ img {
     border-style: solid;
     border-width: 1px;
     border-color: #E7E7E7;
-    background-color: yellow;
+    background-color: #FFFF99;
     text-align: center;
 }
 .cost{
@@ -230,6 +247,19 @@ img {
 .ra {
     color: rgba(139,69,19, 0.8);
     padding-left: 0.5em;
+    text-align: center;
+}
+.ra-title {
+    color: rgba(139,69,19, 0.8);
+    padding-left: 0.5em;
+    text-align: center;
+    background-color: #F8F8F8;
+}
+.intent {
+    color: rgba(139,69,19, 0.8);
+    padding-left: 0.5em;
+    text-align: center;
+    font-style: italic;
 }
 
 .category-title {
@@ -290,6 +320,9 @@ img {
     border-color: red;
     box-shadow: 2px 2px 2px red;
 
+}
+.intent-standout{
+    background-color: yellow;
 }
 textarea {
     width: 100%;

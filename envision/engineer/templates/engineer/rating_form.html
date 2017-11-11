@@ -1,124 +1,138 @@
-<!DOCTYPE html>
-{% load staticfiles %}
-{% load bootstrap3 %}
 
-{# Load CSS and JavaScript #}
-{% bootstrap_css %}
-{% bootstrap_javascript %}
+        <!DOCTYPE html>
+        {% load staticfiles %}
+        {% load bootstrap3 %}
 
-{# Display django.contrib.messages as Bootstrap alerts #}
-{% load widget_tweaks %}
+        {# Load CSS and JavaScript #}
+        {% bootstrap_css %}
+        {% bootstrap_javascript %}
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="{%  static "rating.js" %}"></script>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<link rel = "stylesheet" type="text/css" href="{%  static "styles.css" %}">
+        {# Display django.contrib.messages as Bootstrap alerts #}
+        {% load widget_tweaks %}
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="{%  static "rating.js" %}"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+                <link rel = "stylesheet" type="text/css" href="{%  static "styles.css" %}">
 
 
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Rating Form</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <div class = "navbar navbar-default navbar-fixed-top">
-        <ul class="nav navbar-nav">
-            <li class ="navbar-brand">Envision Rating System</li>
-            <li class="navbar-brand" style="color:black">Total Score: <span id="total-selected">0</span></li>
-            <li class="navbar-brand" style="color:black">Points Possible: <span id="total-possible">0</span></li>
+        <html>
+        <head lang="en">
+                <meta charset="UTF-8">
+                <title>Rating Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <div class = "navbar navbar-default navbar-fixed-top">
+                <ul class="nav navbar-nav">
+                <li class ="navbar-brand">Envision Rating System</li>
+        <li class="navbar-brand" style="color:black">Total Score: <span id="total-selected">0</span></li>
+        <li class="navbar-brand" style="color:black">Points Possible: <span id="total-possible">0</span></li>
         </ul>
-    </div>
-</head>
-<body>
-<div id="modal">
-    <div class="modalcontent">
-        <h1>Instructions Before You Get Started!</h1>
-        <p>Before selecting a level of acheivement read the INTENT of each credit carefully. Alos, each of the credits contains a set of evaluation criteria, listed in the "details/guidance" link.</p>
-        <button id="button">Close</button>
-    </div>
-</div>
-{#BELOW CHANGES BASED ON VERSION 0/1/2#}
-<form id="happy-form" class="navbar-form navbar-center" method="POST" action="{% url 'engineer_detail' engineer.pk %}">
-    {% csrf_token %}
-    <div class = "headerbox">
-        <div class = "resource">
-            <h3 class="category-title">Resource Allocation</h3>
         </div>
-    </div>
-{#STARTS RA1.1#}
-    <div class="container bigbox">
-        <div class="row">
-            <h4 class="col-md-1 ra">RA 1.1</h4>
-            <div class="version-one">
-                <p class="col-md-4 textbox"><b>Reduce Energy Intensity of Materials</b>
-                    <br>Reduce the impacts of material use over the project life by using less material or specifying materials with lower net embodied energy from extraction, refinement/manufacture, and transport.<br>
-                    <a href={% static "details/RA1.1/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <div class="version-two">
-                <p class="col-md-4 textbox"><b>Reduce <u>Cost</u> of Energy Intensity of Materials</b>
-                    <br>Reduce transportation <u>costs</u> over the project life by using less material that requires transportation from the manufacturer to the site.<br>
-                    <a href={% static "details/RA1.1/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <h4 class="col-md-2"> {{ rating_form.RA1_1_inc }}</h4>
-            <h4 class="col-md-2"> {{ rating_form.RA1_1_loa }}</h4>
-            <div class="col-md-1 col-md-offset-1 box-yellow">
-                <h4 class="selected-points" id="ra11-selected-points">0</h4>
-            </div>
-            <div class="col-md-1 box-white">
-                <h4 class="possible-points" id="ra11-possible-points">0</h4>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    {{ rating_form.RA1_1_exp |attr:"rows:4" }}
-                    <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
+        </head>
+        <body>
+        <div id="modal">
+                <div class="modalcontent">
+                <h1>Instructions Before You Get Started!</h1>
+        <p>Before selecting a level of acheivement read the INTENT of each credit carefully. Also, each of the credits contains a set of evaluation criteria, listed in the "details/guidance" link.</p>
+        <button id="button">Close</button>
                 </div>
-            </div>
+                </div>
+                {#BELOW CHANGES BASED ON VERSION 0/1/2#}
+        <form id="happy-form" class="navbar-form navbar-center" method="POST" action="{% url 'engineer_detail' engineer.pk %}">
+                {% csrf_token %}
+        <div class = "headerbox">
+                <div class = "resource">
+                <h3 class="category-title">Resource Allocation</h3>
+        </div>
+        </div>
+        {#STARTS RA1.1#}
+        <div class="container bigbox">
+                <div class="row">
+                <h4 class="col-md-1 ra">RA 1.1:
+        <br><br>Intent:
+        </h4>
+        <div class="version-one">
+                <p class="col-md-4 textbox"><b>Reduce Energy Intensity of Materials</b>
+        <br>
+        <br>Reduce the impacts of material use over the project life by using less material or specifying materials with lower net embodied energy from extraction, refinement/manufacture, and transport.<br>
+        <a href={% static "details/negative_goal_framing/Neg._RA1.1/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+                </div>
+                <div class="version-two">
+                <p class="col-md-4 textbox"><b>Reduce <u>Cost</u> of Energy Intensity of Materials</b>
+        <br>Reduce transportation <u>costs</u> over the project life by using less material that requires transportation from the manufacturer to the site.<br>
+        <a href={% static "details/RA1.1/index.html" %} target="_blank">detail/guidance</a>
+                </p>
+                </div>
+                <h4 class="col-md-2"> {{ rating_form.RA1_1_inc }}</h4>
+        <h4 class="col-md-2"> {{ rating_form.RA1_1_loa }}</h4>
+        <div class="col-md-1 col-md-offset-1 box-yellow">
+                <h4 class="selected-points" id="ra11-selected-points">0</h4>
+                </div>
+                <div class="col-md-1 box-white">
+                <h4 class="possible-points" id="ra11-possible-points">0</h4>
+                </div>
+                <div class="row">
+                <div class="col-md-6">
+                {{ rating_form.RA1_1_exp |attr:"rows:4" }}
+        <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
+        </div>
+        </div>
         </div>
         <div class='row'>
-        <div class='col-md-1'></div>
-            <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
-            <h4 class="col-md-4">{{ rating_form.RA1_1_cost }}</h4>
+                <div class='col-md-1'></div>
+                <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
+        <h4 class="col-md-4">{{ rating_form.RA1_1_cost }}</h4>
         </div>
-    </div>
+        </div>
 {#STARTS RA1.2#}
-    <div class="container bigbox">
-        <div class="row">
-            <h4 class="col-md-1 ra">RA 1.2</h4>
-            <div class="version-one">
-                <p class="col-md-4 textbox"><b>Support Sustainable Procurement Practices</b>
-                    <br>Develop sustainable procurement policies and programs to source materials and equipment from manufacturers and suppliers that implement sustainable practices.<br>
-                    <a href={% static "details/RA1.2/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
-            <div class="version-two">
-                <p class="col-md-4 textbox"><b>Protect <u>Human Health</u> by Supporting Sustainable Procurement Practices </b>
-                    <br>Protect <u>human health</u> by developing sustainable procurement policies and programs to source materials and equipment from manufacturers and suppliers that implement sustainable practices.<br>
-                    <a href={% static "details/RA1.2/index.html" %} target="_blank">detail/guidance</a>
-                </p>
-            </div>
+<div class="container bigbox">
+    <div class="row">
+        <h4 class="col-md-1 ra">RA 1.2:</h4>
+        <div class="version-one">
+            <h4 class="col-md-4 ra-title">Support Sustainable Procurement Practices
+        </h4>
+        </div>
+        <div class="version-two">
+            <p class="col-md-4 ra-title"><b>Protect <u>Human Health</u> by Supporting Sustainable Procurement Practices</b>
+            </p>
+        </div>
+        <div>
             <h4 class="col-md-2"> {{ rating_form.RA1_2_inc }}</h4>
             <h4 class="col-md-2"> {{ rating_form.RA1_2_loa }}</h4>
+        </div>
             <div class="col-md-1 col-md-offset-1 box-yellow">
                 <h4 class="selected-points" id="ra12-selected-points">0</h4>
             </div>
             <div class="col-md-1 box-white">
                 <h4 class="possible-points" id="ra12-possible-points">0</h4>
             </div>
+        </div>
             <div class="row">
-                <div class="col-md-6">
+                <h4 class='col-md-1 intent'>INTENT:</h4>
+                <div class="version-one">
+                    <div class="col-md-4 intent-textbox"><b>Develop sustainable procurement policies and programs to source materials and equipment from manufacturers and suppliers that implement sustainable practices.</b><br>
+                        <a href={% static "details/RA1.2/index.html" %} target="_blank">detail/guidance</a>
+                    </div>
+                </div>
+                <div class="version-two">
+                    <div class="col-md-4 intent-textbox"><b>Protect <u>human health</u> by developing sustainable procurement policies and programs to source materials and equipment from manufacturers and suppliers that implement sustainable practices.</b><br>
+                        <a href={% static "details/RA1.2/index.html" %} target="_blank">detail/guidance</a>
+                    </div>
+                </div>
+                <div class="col-md-7">
                     {{ rating_form.RA1_2_exp |attr:"rows:4" }}
                     <br>Count: <span class="current-count" id="span-1">0</span> | Required: <span class="required-count">0</span>
                 </div>
             </div>
-        </div>
         <div class='row'>
-        <div class='col-md-1'></div>
-            <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
-            <h4 class="col-md-4">{{ rating_form.RA1_2_cost }}</h4>
+        <div class='col-md-5'></div>
+            <p class='col-md-5 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
+            <h4 class="col-md-2">{{ rating_form.RA1_2_cost }}</h4>
         </div>
+    </div>
     </div>
 {#STARTS RA1.4#}
     <div class="container bigbox">
@@ -153,7 +167,7 @@
         </div>
         <div class='row'>
         <div class='col-md-1'></div>
-            <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
+            <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
             <h4 class="col-md-4">{{ rating_form.RA1_4_cost }}</h4>
         </div>
     </div>
@@ -190,7 +204,7 @@
         </div>
         <div class='row'>
         <div class='col-md-1'></div>
-            <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
+            <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
             <h4 class="col-md-4">{{ rating_form.RA1_5_cost }}</h4>
         </div>
     </div>
@@ -227,7 +241,7 @@
         </div>
         <div class='row'>
         <div class='col-md-1'></div>
-            <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
+            <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
             <h4 class="col-md-4">{{ rating_form.RA1_5_cost }}</h4>
         </div>
     </div>
@@ -264,7 +278,7 @@
         </div>
         <div class='row'>
         <div class='col-md-1'></div>
-            <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
+            <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
             <h4 class="col-md-4">{{ rating_form.RA2_2_cost }}</h4>
         </div>
     </div>
@@ -301,7 +315,7 @@
         </div>
         <div class='row'>
         <div class='col-md-1'></div>
-            <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
+            <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
             <h4 class="col-md-4">{{ rating_form.RA3_1_cost }}</h4>
         </div>
     </div>
@@ -338,7 +352,7 @@
         </div>
         <div class='row'>
         <div class='col-md-1'></div>
-            <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
+            <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
             <h4 class="col-md-4">{{ rating_form.RA3_2_cost }}</h4>
         </div>
     </div>
@@ -375,7 +389,7 @@
         </div>
         <div class='row'>
         <div class='col-md-1'></div>
-            <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
+            <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
             <h4 class="col-md-4">{{ rating_form.RA3_3_cost }}</h4>
         </div>
     </div>
@@ -393,7 +407,7 @@
             <div class="version-one">
                 <p class="col-md-4 textbox"><b>Preserve Sites of High Ecological Value</b>
                     <br>Avoid placing the project and temporary works on a site that has been identified as being of high ecological value.<br>
-                    <a href={% static "details/NW1.1/index.html" %} target="_blank">detail/guidance</a>
+                    <a href={% static "details/negative_goal_framing/Neg. NW1.1 done/index.html" %} target="_blank">detail/guidance</a>
                 </p>
             </div>
             <div class="version-two">
@@ -419,7 +433,7 @@
         </div>
         <div class='row'>
         <div class='col-md-1'></div>
-            <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
+            <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
             <h4 class="col-md-4">{{ rating_form.NW1_1_cost }}</h4>
         </div>
     </div>
@@ -456,7 +470,7 @@
         </div>
         <div class='row'>
         <div class='col-md-1'></div>
-            <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
+            <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
             <h4 class="col-md-4">{{ rating_form.NW2_2_cost }}</h4>
         </div>
     </div>
@@ -493,7 +507,7 @@
         </div>
         <div class='row'>
         <div class='col-md-1'></div>
-            <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
+            <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
             <h4 class="col-md-4">{{ rating_form.NW2_3_cost }}</h4>
         </div>
     </div>
@@ -530,7 +544,7 @@
         </div>
         <div class='row'>
         <div class='col-md-1'></div>
-            <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
+            <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
             <h4 class="col-md-4">{{ rating_form.NW2_4_cost }}</h4>
         </div>
     </div>
@@ -567,15 +581,15 @@
         </div>
         <div class='row'>
         <div class='col-md-1'></div>
-            <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
+            <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
             <h4 class="col-md-4">{{ rating_form.NW3_1_cost }}</h4>
         </div>
     </div>
-{#Climate and Risk#}
+{#Risk and Resilience#}
     <hr>
     <div class = "headerbox">
         <div class = "climate">
-            <h3 class="category-title">Climate and Risk</h3>
+            <h3 class="category-title">Risk and Resilience</h3>
         </div>
     </div>
 {#STARTS RR1.1#}
@@ -611,7 +625,7 @@
         </div>
         <div class='row'>
         <div class='col-md-1'></div>
-            <p class='col-md-4 textbox'>Over the poject <b>life cycle</b> your recommendation will cost or save the owner money?</p>
+            <p class='col-md-4 textbox2'>Over the project <b>life cycle</b> your recommendation will cost or save the owner money?</p>
             <h4 class="col-md-4">{{ rating_form.RR1_1_cost }}</h4>
         </div>
     </div>
