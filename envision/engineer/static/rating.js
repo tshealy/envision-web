@@ -719,12 +719,16 @@ $(function() {
         }, 1);
     });
 
-    if (parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 3){
+    if (parseInt($(".data").html()) === 2){
         $(".version-two").show();
     };
 
     if (parseInt($(".data").html()) === 1){
         $(".version-one").show();
+    };
+
+    if (parseInt($(".data").html()) === 3){
+        $(".version-two").show();
     };
 
     $("#id_total_time").hide();
