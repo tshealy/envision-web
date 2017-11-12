@@ -719,7 +719,7 @@ $(function() {
         }, 1);
     });
 
-    if (parseInt($(".data").html()) === 2){
+    if (parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 3){
         $(".version-two").show();
     };
 
