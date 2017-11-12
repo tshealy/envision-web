@@ -39,6 +39,23 @@
         <button id="button">Close</button>
                 </div>
                 </div>
+        <div class="container">
+        <div class = "jumbotron">
+            <h2>Project Details</h2>
+                <p>The park will serve to hold and treat reclaimed waste water. This reclaimed water will provide irrigation to the facility and help replenish ground aquifers that are receding at an unprecedented rate. As you make recommendations as the sustainability engineer keep in mind what should be included:</p>
+                 <ul>
+                    <li>Multi-purpose fields and walking trails</li>
+                    <li>Adjacent parking lots</li>
+                    <li>Restroom and community facilities</li>
+                    <li>Landscaping to treat water and provide shading</li>
+                    <li>Reclaimed waste water holding facility for 680,000 gallons per day</li>
+                    <li>Preserving and resotring existing habitats and important natural resources</li>
+                    <li>Locally sourced materials</li>
+                </ul>
+            <p><b>Please act as the sustainability engineer and review the following Envision credits. You should decide which credits are applicable and what level of achivement should the team strive to meet. Include an explanation/notes in the text box for each credit.</b></p>
+            <p>There are 15 credits. This should not take you more than one hour!<p>
+        </div>
+                </div>
                 {#BELOW CHANGES BASED ON VERSION 0/1/2#}
         <form id="happy-form" class="navbar-form navbar-center" method="POST" action="{% url 'engineer_detail' engineer.pk %}">
                 {% csrf_token %}
@@ -79,7 +96,7 @@
         <div class="version-one">
             <div class="col-md-5 intent-textbox-1">
                 <p>Reduce the impacts of material use over the project life by using less material or specifying materials with lower net embodied energy from extraction, refinement/manufacture, and transport.</p>
-                <a href={% static "details/RA1.1/index.html" %} target="_blank">More detail and guidance</a>
+                <a href={% static "details/control/RA1.1/index.html" %} target="_blank">More detail and guidance</a>
             </div>
         </div>
         <div class="version-two">
