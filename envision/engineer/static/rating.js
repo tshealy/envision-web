@@ -188,7 +188,7 @@ $(function() {
             });
         };
         $("#id_RA3_1_loa").change(function() {
-            $("#ra31-selected-points").text($("#id_ra3_1_loa :selected").val());
+            $("#ra31-selected-points").text($("#id_RA3_1_loa :selected").val());
         });
         if (parseInt($(".data").html()) === 2){
             $("#id_RA3_2_loa").val('22').ready(function() {
