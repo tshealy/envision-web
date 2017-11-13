@@ -46,9 +46,9 @@ $(function() {
         return errorCount === 0;
     };
 
-    //Default setting required count to 250
+    //Default setting required count to 200
     if (parseInt($(".data").html()) === 2){
-        $("select").parent().parent().siblings(".row").children(".col-md-6").find(".required-count").text(charCounts['Conserving']);
+        $("select").parent().parent().parent().siblings(".row").children(".col-md-6").find(".required-count").text(charCounts['Conserving']);
     };
 
     $("textarea").keyup(function(){
@@ -59,7 +59,7 @@ $(function() {
     });
 
     $("select").change(function(){
-        var row = $(this).parent().parent().siblings(".row");
+        var row = $(this).parent().parent().parent().siblings(".row");
         var text = $(this).children(':selected').text();
         if (text === "Include") {
             text = $(this).parent().siblings("h4").find("select").children(':selected').text()
@@ -274,7 +274,7 @@ $(function() {
                    writePossiblePoints($("#ra11-possible-points"), getLastValue($("#id_RA1_1_loa")));
                    $("#id_RA1_1_loa").val('20').ready(function () {
                        $("#ra11-selected-points").text($("#id_RA1_1_loa :selected").val());
-                       $("select").parent().parent().siblings(".row").children(".col-md-6").find(".required-count").text(charCounts['Conserving']);
+                       $("select").parent().parent().parent().siblings(".row").children(".col-md-6").children("#ra11").text(charCounts['Conserving']);
                    })
                }
                else {
@@ -293,7 +293,7 @@ $(function() {
                    writePossiblePoints($("#ra12-possible-points"), getLastValue($("#id_RA1_2_loa")));
                    $("#id_RA1_2_loa").val('12').ready(function () {
                        $("#ra12-selected-points").text($("#id_RA1_2_loa :selected").val());
-                       $("select").parent().parent().siblings(".row").children(".col-md-6").find(".required-count").text(charCounts['Conserving']);
+                       $("select").parent().parent().parent().siblings(".row").children(".col-md-6").children("#ra12").text(charCounts['Conserving']);
                    })
                }
                else {
@@ -312,7 +312,7 @@ $(function() {
                    writePossiblePoints($("#ra14-possible-points"), getLastValue($("#id_RA1_4_loa")));
                    $("#id_RA1_4_loa").val('16').ready(function () {
                        $("#ra14-selected-points").text($("#id_RA1_4_loa :selected").val());
-                       $("select").parent().parent().siblings(".row").children(".col-md-6").find(".required-count").text(charCounts['Conserving']);
+                       $("select").parent().parent().parent().siblings(".row").children(".col-md-6").children("#ra14").text(charCounts['Conserving']);
                    })
                }
                else {
@@ -331,7 +331,7 @@ $(function() {
                    writePossiblePoints($("#ra15-possible-points"), getLastValue($("#id_RA1_5_loa")));
                    $("#id_RA1_5_loa").val('16').ready(function () {
                        $("#ra15-selected-points").text($("#id_RA1_5_loa :selected").val());
-                       $("select").parent().parent().siblings(".row").children(".col-md-6").find(".required-count").text(charCounts['Restorative']);
+                       $("select").parent().parent().parent().siblings(".row").children(".col-md-6").children("#ra15").text(charCounts['Restorative']);
                    })
                }
                else {
@@ -350,7 +350,7 @@ $(function() {
                    writePossiblePoints($("#ra16-possible-points"), getLastValue($("#id_RA1_6_loa")));
                    $("#id_RA1_6_loa").val('8').ready(function () {
                        $("#ra16-selected-points").text($("#id_RA1_6_loa :selected").val());
-                       $("select").parent().parent().siblings(".row").children(".col-md-6").find(".required-count").text(charCounts['Conserving']);
+                       $("select").parent().parent().parent().siblings(".row").children(".col-md-6").children("#ra16").text(charCounts['Conserving']);
                    })
                }
                else {
@@ -369,7 +369,7 @@ $(function() {
                    writePossiblePoints($("#ra22-possible-points"), getLastValue($("#id_RA2_2_loa")));
                    $("#id_RA2_2_loa").val('12').ready(function () {
                        $("#ra22-selected-points").text($("#id_RA2_2_loa :selected").val());
-                       $("select").parent().parent().siblings(".row").children(".col-md-6").find(".required-count").text(charCounts['Conserving']);
+                       $("select").parent().parent().parent().siblings(".row").children(".col-md-6").children("#ra22").text(charCounts['Conserving']);
                    })
                }
                else {
@@ -388,7 +388,7 @@ $(function() {
                    writePossiblePoints($("#ra31-possible-points"), getLastValue($("#id_RA3_1_loa")));
                    $("#id_RA3_1_loa").val('22').ready(function () {
                        $("#ra31-selected-points").text($("#id_RA3_1_loa :selected").val());
-                       $("select").parent().parent().siblings(".row").children(".col-md-6").find(".required-count").text(charCounts['Restorative']);
+                       $("select").parent().parent().parent().siblings(".row").children(".col-md-6").children("#ra31").text(charCounts['Restorative']);
                    })
                }
                else {
@@ -397,8 +397,8 @@ $(function() {
                };
            };
         });
-         $("#id_RA3_2_inc").change(function(){
-           if ($("#id_RA3_3_inc :selected").val() == 1) {
+        $("#id_RA3_2_inc").change(function(){
+           if ($("#id_RA3_2_inc :selected").val() == 1) {
                $("#id_RA3_2_loa").val(0);
                writePossiblePoints( $("#ra32-selected-points"), 0 );
                writePossiblePoints( $("#ra32-possible-points"), 0 );
@@ -406,17 +406,17 @@ $(function() {
                if (parseInt($(".data").html()) === 2 || parseInt($(".data").html()) === 3) {
                    writePossiblePoints($("#ra32-possible-points"), getLastValue($("#id_RA3_2_loa")));
                    $("#id_RA3_2_loa").val('22').ready(function () {
-                       $("#ra32-selected-points").text($("#id_RA3_2_loa :selected").val());
-                       $("select").parent().parent().siblings(".row").children(".col-md-6").find(".required-count").text(charCounts['Restorative']);
+                       $("#ra33-selected-points").text($("#id_RA3_2_loa :selected").val());
+                       $("select").parent().parent().parent().siblings(".row").children(".col-md-6").children("#ra32").text(charCounts['Restorative']);
                    })
                }
                else {
-                   writePossiblePoints( $("#nra32-possible-points"), getLastValue($("#id_RA3_2_loa")) );
+                   writePossiblePoints( $("#ra32-possible-points"), getLastValue($("#id_RA3_2_loa")) );
                    $("#ra32-selected-points").text($("#id_RA3_2_loa :selected").val());
                };
            };
         });
-         $("#id_RA3_3_inc").change(function(){
+        $("#id_RA3_3_inc").change(function(){
            if ($("#id_RA3_3_inc :selected").val() == 1) {
                $("#id_RA3_3_loa").val(0);
                writePossiblePoints( $("#ra33-selected-points"), 0 );
@@ -426,7 +426,7 @@ $(function() {
                    writePossiblePoints($("#ra33-possible-points"), getLastValue($("#id_RA3_3_loa")));
                    $("#id_RA3_3_loa").val('8').ready(function () {
                        $("#ra33-selected-points").text($("#id_RA3_3_loa :selected").val());
-                       $("select").parent().parent().siblings(".row").children(".col-md-6").find(".required-count").text(charCounts['Conserving']);
+                       $("select").parent().parent().parent().siblings(".row").children(".col-md-6").children("#ra33").text(charCounts['Conserving']);
                    })
                }
                else {
@@ -445,7 +445,7 @@ $(function() {
                    writePossiblePoints($("#nw11-possible-points"), getLastValue($("#id_NW1_1_loa")));
                    $("#id_NW1_1_loa").val('24').ready(function () {
                        $("#nw11-selected-points").text($("#id_NW1_1_loa :selected").val());
-                       $("select").parent().parent().siblings(".row").children(".col-md-6").find(".required-count").text(charCounts['Restorative']);
+                       $("select").parent().parent().parent().siblings(".row").children(".col-md-6").children("#nw11").text(charCounts['Restorative']);
                    })
                }
                else {
@@ -464,7 +464,7 @@ $(function() {
                    writePossiblePoints($("#nw22-possible-points"), getLastValue($("#id_NW2_2_loa")));
                    $("#id_NW2_2_loa").val('24').ready(function () {
                        $("#nw22-selected-points").text($("#id_NW2_2_loa :selected").val());
-                       $("select").parent().parent().siblings(".row").children(".col-md-6").find(".required-count").text(charCounts['Restorative']);
+                       $("select").parent().parent().parent().siblings(".row").children(".col-md-6").children("#nw22").text(charCounts['Restorative']);
                    })
                }
                else {
@@ -483,7 +483,7 @@ $(function() {
                    writePossiblePoints($("#nw23-possible-points"), getLastValue($("#id_NW2_3_loa")));
                    $("#id_NW2_3_loa").val('12').ready(function () {
                        $("#nw23-selected-points").text($("#id_NW2_3_loa :selected").val());
-                       $("select").parent().parent().siblings(".row").children(".col-md-6").find(".required-count").text(charCounts['Restorative']);
+                       $("select").parent().parent().parent().siblings(".row").children(".col-md-6").children("#nw23").text(charCounts['Restorative']);
                    })
                }
                else {
@@ -502,7 +502,7 @@ $(function() {
                    writePossiblePoints($("#nw24-possible-points"), getLastValue($("#id_NW2_4_loa")));
                    $("#id_NW2_4_loa").val('18').ready(function () {
                        $("#nw24-selected-points").text($("#id_NW2_4_loa :selected").val());
-                       $("select").parent().parent().siblings(".row").children(".col-md-6").find(".required-count").text(charCounts['Restorative']);
+                       $("select").parent().parent().parent().siblings(".row").children(".col-md-6").children("#nw24").text(charCounts['Restorative']);
                    })
                }
                else {
@@ -521,7 +521,7 @@ $(function() {
                    writePossiblePoints($("#nw31-possible-points"), getLastValue($("#id_NW3_1_loa")));
                    $("#id_NW3_1_loa").val('18').ready(function () {
                        $("#nw31-selected-points").text($("#id_NW3_1_loa :selected").val());
-                       $("select").parent().parent().siblings(".row").children(".col-md-6").find(".required-count").text(charCounts['Restorative']);
+                       $("select").parent().parent().parent().siblings(".row").children(".col-md-6").children("#nw31").text(charCounts['Restorative']);
                    })
                }
                else {
@@ -540,7 +540,7 @@ $(function() {
                    writePossiblePoints($("#rr11-possible-points"), getLastValue($("#id_RR1_1_loa")));
                    $("#id_RR1_1_loa").val('25').ready(function () {
                        $("#rr11-selected-points").text($("#id_RR1_1_loa :selected").val());
-                       $("select").parent().parent().siblings(".row").children(".col-md-6").find(".required-count").text(charCounts['Restorative']);
+                       $("select").parent().parent().parent().siblings(".row").children(".col-md-6").children("#rr11").text(charCounts['Restorative']);
                    })
                }
                else {
