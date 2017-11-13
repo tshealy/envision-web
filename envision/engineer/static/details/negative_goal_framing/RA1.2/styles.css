@@ -23,13 +23,13 @@
 }
 
 .jumbo-color{
-    background-color:cadetblue;
+    background-color:rgba(139,69,19, 0.8);
     padding: 3em;
     margin-top: 2em;
 }
 
 .loa-color{
-    color:cadetblue;
+    color:rgba(139,69,19, 0.8);
     text-align: center;
 }
 .loa-detail{
