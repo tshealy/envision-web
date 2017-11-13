@@ -62,13 +62,13 @@ $(function() {
         var row = $(this).parent().parent().parent().siblings(".row");
         var text = $(this).children(':selected').text();
         if (text === "Include") {
-            text = $(this).parent().siblings("h4").find("select").children(':selected').text()
+            text = $(this).parent().siblings("h5").find("select").children(':selected').text()
         }
 
         if (text === "Exclude") {
-            $(this).parents().siblings("h4").last().children().hide();
+            $(this).parents().siblings("h5").last().children().hide();
         } else {
-            $(this).parents().siblings("h4").last().children().show();
+            $(this).parents().siblings("h5").last().children().show();
         }
         row.children(".col-md-6").find(".required-count").text(charCounts[text]);
     });
