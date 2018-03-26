@@ -11,11 +11,11 @@ $(function() {
 
     var charCounts = {
         'No Added Value': 0,
-        'Improved': 75,
-        'Enhanced': 100,
-        'Superior': 150,
-        'Conserving': 200,
-        'Restorative': 250,
+        'Improved': 50,
+        'Enhanced': 75,
+        'Superior': 100,
+        'Conserving': 125,
+        'Restorative': 150,
         'Exclude': 50
     };
     //current
