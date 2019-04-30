@@ -212,7 +212,7 @@ img {
     border-style: solid;
     border-width: 0px;
     /*border-color: rgba(229, 103, 23, 0.8);*/
-    background-color: #FFFF99;
+    /* background-color: #FFFF99; */
 }
 .textbox2 {
     border-radius: 3px;
