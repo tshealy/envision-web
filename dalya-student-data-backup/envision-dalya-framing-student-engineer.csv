@@ -1,0 +1,277 @@
+id,name,version,research
+1,tripp,2,1
+2,tripp2,3,1
+3,Dalya 1,1,1
+4,Dalya 2,2,1
+5,Dalya 3,3,1
+6,Dalya 4,1,1
+7,Elliot Idio,2,1
+8,Kate Bentrem,3,1
+9,William Levi Hiatt,1,1
+10,Joshua Levy,2,1
+11,David Huff,3,1
+12,Hunter Radecki,1,1
+13,Elwaleed Elshowaya,2,1
+14,Chris Osterhout,3,1
+15,Faith Kelley,1,1
+16,Sydney Greenspan,2,1
+17,April Brady,3,1
+18,Julia Cadman,1,1
+19,Julia Cadman,2,1
+20,Jonathan Epperson,3,1
+21,Anna McDowell,1,1
+22,Cody Trevino,2,1
+23,Jason McCoid,3,1
+24,test,1,1
+25,testt,2,1
+26,Katherine Kowaluk,3,1
+27,testtt,1,1
+28,testtt,2,1
+29,testttt,3,1
+30,Lucy Travers,1,1
+31,Alesya Sarakhman,2,1
+32,Gina Huang,3,1
+33,Eric Herwitz,1,1
+34,Collin Ordonez,2,1
+35,Kase Poling,3,1
+36,Elliott Delp,1,1
+37,Julia Cadman,2,1
+38,Michael Glass,3,1
+39,Carly Federman,1,1
+40,Sriram Ranganathan,2,1
+41,Gina Huang,3,1
+42,Morgan G Duncan,1,1
+43,Aleia Warren,2,1
+44,Aliou Sylla,3,1
+45,Hannah Santus,1,1
+46,Marcella Kaplan,2,1
+47,Andrew Jaeger,3,1
+48,Ally Maly,1,1
+49,Kim Kramer,2,1
+50,Elliot Idio,3,1
+51,Genevieve Davis,1,1
+52,Asia Cuffee,2,1
+53,Cara Dietrich,3,1
+54,Siddhi Patel,1,1
+55,Annie Tkacik,2,1
+56,Melissa Joye,3,1
+57,Jayna Silva,1,1
+58,Thomas Super,2,1
+59,Thomas Super,3,1
+60,Matete Kaunda,1,0
+61,Frank Mazzola,2,1
+62,Alesya Sarakhman,3,1
+63,Howie Yohannes,1,1
+65,Joshua Artz,,1
+64,Joshua Artz,2,1
+66,Erin Brockman,1,1
+67,Evan Robohm,2,1
+68,Lexi Schirle ,3,1
+69,Winstin E Wilson,1,1
+70,Peter Schwartz,2,1
+71,Sanjaya Shrestha,3,1
+72,Jack Shepherd,1,1
+73,Charles Jennings,2,0
+74,Adam Norrbom,3,1
+75,Peter Yurkovich,1,1
+76,Leonel Usmayo,2,1
+77,Maureen Sawyer,3,1
+78,Koleman Joy,1,1
+79,Jake Vail,2,1
+80,Rachel Pocratsky,3,1
+81,Jake Vail,1,1
+82,Julian Iarussi,2,1
+83,Kenneth Perando,3,1
+84,Kenneth Perando,1,1
+85,Tyler Kaplan,2,1
+86,Nicholas Squillante,3,1
+87,Gebrelwa Mikuria,1,1
+88,Julian Iarussi,2,1
+89,Mahdi Alsharif,3,1
+90,Henry Hutcheson,1,1
+91,Jayna Silva,2,1
+92,Lindsay Hoagland,3,1
+93,Liz Smith,1,1
+94,Billy Roxby,2,1
+95,April Brady,3,1
+96,Eann-Emil C. Aquino,1,1
+97,Connor Gaffney,2,1
+98,zibin leng,3,1
+99,Zixuan Geng,1,1
+100,Emily Potter,2,1
+101,Francesca Urcia,3,1
+102,Rosa Dixon,1,1
+103,Andrew Kovach,2,1
+104,Andrew Kovach,3,1
+106,Rachel Stewart,,1
+105,Rachel Stewart,1,1
+107,Allie Zuras,3,1
+108,Karl Gerlich,1,0
+109,Benjamin Scholz,2,1
+110,Shengjie Lin,3,1
+111,Zachariah McLaughlin,1,0
+112,Thomas McLoughlin,2,1
+113,Connor Bezirdjian,3,1
+114,Nick McGhee,1,1
+115,Maeghan Rockmore,2,1
+116,george zhang,3,1
+117,Jacob Harrell,1,1
+118,Nicholas Alley,2,1
+119,george zhang,3,1
+120,Hannah Armstrong,1,1
+121,Tyler Krohn,2,1
+122,Nicholas Hilden,3,1
+123,Abdel Altarazi,1,1
+124,James Anton,2,1
+125,Shengjie Lin,3,1
+126,Alex M Robertson,1,1
+127,Andrew Jaeger,2,1
+128,Jessica Mingo,3,1
+129,Nathan Blacka,1,1
+130,Bradley Gresham,2,1
+131,Spenser Davis,3,1
+132,Andrew Jaeger,1,1
+133,Gabriella Johnson,2,1
+134,Adam Caretti,3,1
+135,Benjamin Stadler,1,1
+136,Rooker Shurley,2,0
+137,Ben Meseroll,3,1
+138,Jamie Timmer,1,1
+139,Dylan Honardoust,2,0
+140,Juliann Jack,3,1
+141,Andrew Manion,1,1
+142,Blake Pettiford,2,1
+143,Stephen McCray,3,1
+144,Austin Wydajewski,1,1
+145,Anthony Gang,2,1
+146,xian an,3,1
+147,Daniela Charles,1,1
+148,Ian McManus ,2,1
+149,Ian McManus ,3,1
+150,Daniel Dillon,1,1
+151,Austin Harris,2,1
+152,Joshua Bartlett,3,1
+153,Erika Pleczynski,1,1
+154,Andrew Jaeger,2,1
+155,Peter Vaccacio,3,1
+156,Erin Brockman,1,1
+157,Justo Mazariegos,2,1
+158,Graham Peterson,3,1
+159,Kedanta Chandler,1,1
+160,Tyler Krohn,2,1
+161,Zabih Safi,3,1
+162,Zoe Foxhall,1,1
+163,Rachel VanWormer,2,1
+164,Chad Foltz,3,1
+165,Ahmed,1,1
+166,Daniel Szalecki,2,1
+167,Brian Keith Gottberg,3,1
+168,Sabrina Curtiss ,1,1
+169,Jacky,2,1
+170,Ian Pierce,3,1
+171,Kathryn Morrissey,1,1
+172,Nathan Collins,2,1
+173,Rooker Shurley,3,0
+174,Erin Hrovatic,1,1
+175,Jiahong Pan,2,1
+176,Jiahong Pan,3,1
+177,nicholas fattman,1,1
+178,Yiyang Wang,2,1
+179,Lauren Buellesbach,3,1
+180,Erin O'Connor,1,1
+181,Patricia Asiatico,2,1
+182,Ryan Niewoehner,3,1
+183,Ahmed,1,1
+184,Dillon Jiang,2,1
+185,Yi Liang,3,1
+186,Dillon Jiang,1,1
+187,Tim Bryden,2,1
+188,Anna McDowell,3,1
+189,Amine Hameda Benchekroun,1,1
+190,Samantha Bell,2,1
+191,Carolyn Olmsted,3,1
+192,Teresa DeVino,1,1
+193,Nancy Kaur,2,1
+194,Ryan Gahman ,3,1
+195,Graham Peterson,1,1
+196,Nicholas Mitchell,2,1
+197,Elizabeth Kaniecki,3,1
+198,Theresa McMunn,1,1
+199,Mohamed Elnoubi,2,1
+200,Teresa DeVino,3,1
+201,Akansha Mazumdar,1,1
+202,Daniel Dillon,2,1
+203,Bradley Gresham,3,1
+204,Bradley Gresham,1,1
+205,Trevor Coleman,2,1
+206,Jack Popelka,3,1
+207,Cora Every,1,1
+208,James Joyce,2,1
+209,Faris Sanjakdar,3,1
+210,Jordan Staley,1,1
+211,Kyle Bryant ,2,1
+212,Jason Stoudt,3,1
+213,Kyle Nguyen,1,0
+214,Michael Reuwer,2,1
+215,Abul Khandaker,3,1
+216,Yousif Alousi,1,1
+217,Mahmoud ,2,0
+218,Joseph Penney,3,1
+219,Matthew Mulvey,1,1
+220,Jonathon Tyler Neeble,2,1
+221,Ahmed Ahmed,3,1
+222,Daniel Dillon,1,1
+223,Casey Britt,2,1
+224,John Murrell,3,1
+225,george zhang,1,1
+226,Kenny Balagtas,2,1
+227,William J Lewis,3,1
+228,Danielle Poindexter,1,1
+229,Giang Tran,2,1
+230,Chris Santiago ,3,0
+231,Doug Drew,1,1
+232,Max Lamm,2,1
+233,Doug Drew,3,1
+234,Jiahong Pan,1,1
+235,george zhang,2,1
+236,Connor Smith,3,1
+237,Trevor Snowden,1,1
+238,Lauren Shirley,2,1
+239,Lauren Epps,3,0
+240,Mahmoud ,1,0
+241,Connor Smith,2,1
+242,Yi Liang,3,1
+243,Gianna Argentina,1,1
+244,george zhang,2,1
+245,Jiahong Pan,3,1
+246,Gianna Argentina,1,1
+247,Julian Iarussi,2,1
+248,Andrew Whaley,3,1
+249,Emma Walsh,1,1
+250,Jake Adams,2,1
+251,Kate Bentrem,3,1
+252,george zhang,1,1
+253,Ford Zehner,2,1
+254,bob,3,1
+255,bob davis,1,1
+256,Matthew Wetzel,2,1
+257,Paul Jalowski,3,0
+258,Beosha Gregory,1,1
+259,Natalie,2,1
+260,Yi Liang,3,1
+261,Natalie,1,1
+262,Natalie Rupinski,2,1
+263,t,3,1
+264,t1,1,1
+265,test10,2,1
+266,test11,3,1
+267,Ttest1,1,1
+268,Nabil Ismael,2,1
+269,testttt,3,1
+270,testtttt,1,1
+271,tt,2,1
+272,testdc,3,1
+273,testdc1,1,1
+274,testdc2,2,1
+275,testdc,3,1
+276,ditest,1,1
